@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login page</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-page_demo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-page_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-page_responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loader.css' %}">
+    <link rel="stylesheet" href="{% static 'css/iziToast.css' %}">
+</head>
+
+<body>
+
+    <div class="login-page_container">
+
+        <!--       Sign in Side      -->
+ <div id="loader"></div>
+        <div class="login-section page-side section-ope">
+            <div class="section-page_intro">
+                <img src="{% static 'Image/signin-icon-black.png' %}" alt="signin-icon">
+                <p class="section-page-intro_title">Sign In</p>
+            </div>
+
+            <div class="login-form-area">
+                <p class="form-title">Sign In</p>
+                <div class="section-form">
+                    <form class="login-form">
+                        <label class="login-page_label">
+                            <input required id="login_username" class="login-page_input" type="text" name="email" autocomplete="off">
+                            <span class="login-page_placeholder">Email</span>
+                        </label>
+                        <label class="login-page_label">
+                            <input required id="login_password" class="login-page_input" type="password" name="password">
+                            <span class="login-page_placeholder">Password</span>
+                        </label>
+                        <div class="login-section_submit">
+{#                            <ul>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-google fa-fw"></i></a></li>#}
+{#                            </ul>#}
+                            <div class="login-page-submit-btn">
+                                <input type="submit" name="submit-login" value="submit">
+                            </div>
+                        </div>
+                        <div class="login-page_forget">
+                            <a href="#">Forget Your Password ?</a>
+                        </div>
+                    </form>
+
+                    <form class="forget-form">
+                        <p class="forget-title">Forget Your Password</p>
+                        <label class="login-page_label">
+                            <input class="login-page_input" type="email" name="email" autocomplete="off">
+                            <span class="login-page_placeholder">Email</span>
+                        </label>
+                        <div class="login-section_submit">
+                            <div class="login-page-submit-btn"><input type="submit" name="submit-login" value="submit"></div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!--       Sign up Side      -->
+
+        <div class="signup-section page-side section-clos">
+            <div class="section-page_intro">
+                <img src="{% static 'Image/signup-icon.png' %}" alt="signup-icon">
+                <p class="section-page-intro_title">Sign Up</p>
+            </div>
+
+            <div class="signup-form-area">
+                <p class="form-title">Sign Up</p>
+                <div class="section-form">
+                    <form class="signup-form">
+                       <label class="login-page_label">
+                            <input id="username_reg" required class="login-page_input" type="text" name="username" autocomplete="off">
+                            <span class="login-page_placeholder">Username</span>
+                        </label>
+
+                        <label class="login-page_label">
+                            <input id="fullname" required class="login-page_input" type="text" name="fullname" autocomplete="off">
+                            <span class="login-page_placeholder">Full Name</span>
+                        </label>
+                        <label class="login-page_label">
+                            <input id="email_ad" required class="login-page_input" type="email" name="email" autocomplete="off">
+                            <span class="login-page_placeholder">Email</span>
+                        </label>
+
+                        <label class="login-page_label">
+                            <input id="phone_num" required class="login-page_input" type="tel" name="phone" autocomplete="off">
+                            <span class="login-page_placeholder">Phone</span>
+                        </label>
+                        <label class="login-page_label">
+                            <input id="password1" required class="login-page_input" type="password" name="password">
+                            <span class="login-page_placeholder">Password</span>
+                        </label>
+                        <label class="login-page_label">
+                            <input id="password2" required class="login-page_input" type="password" name="confirm password">
+                            <span class="login-page_placeholder">Confirm Password</span>
+                        </label>
+                        <div class="signup-section_submit">
+{#                            <ul>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-google fa-fw"></i></a></li>#}
+{#                            </ul>#}
+                            <div class="login-page-submit-btn">
+                                <input type="submit" name="submit-signup" value="submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="{% static 'js/jquery-1.12.1.min.js' %}"></script>
+    <script src="{% static 'js/login-page_script.js' %}"></script>
+    <script src="{% static 'js/iziToast.js' %}"></script>
+
+    <script type="text/javascript">
+
+        $('#loader').click(function () {
+                console.log("clicked")
+                $(this).removeClass("is-active")
+            });
+
+            function addloader(){
+                 console.log("showing loader")
+                 $('#loader').addClass("loader loader-default is-active")
+            }
+
+            function removeloader(){
+            console.log("removing the loader");
+            setTimeout(()=>{
+                    $('#loader').removeClass("is-active")
+            },500)
+            }
+
+
+        $(".signup-form").submit(function(event){
+        event.preventDefault();
+        addloader()
+        var pass1 = $("#password1").val()
+        var pass2 = $("#password2").val()
+            if (pass1 === pass2) {
+                 $.ajax({
+                url: "{% url 'shitty:user_second' %}",
+                method: "post",
+                data:{
+                    type: "register",
+                    name: $("#fullname").val(),
+                    email: $("#email_ad").val(),
+                    username: $("#username_reg").val(),
+                    phone: $("#phone_num").val(),
+                    pass1: pass1,
+                },
+                success:function(data){
+                    removeloader()
+                    console.log(data);
+                    if (data.message === "success"){
+                             iziToast.info({
+                                title: 'Agripool',
+                                message: `Thanks for registering`,
+                                position: 'topRight',
+                                transitionIn: 'flipInX',
+                                transitionOut: 'flipOutX',
+                                }
+                                );
+                             setTimeout(function () {
+                            window.location = "{% url 'shitty:dashboard' %}"
+                             },2000)
+
+                    }
+                    else {
+                        var type = data.type;
+                        console.log(type);
+                        if(type === "email"){
+                            $("#email_ad").val(" ")
+                        }
+
+                        if(type === "username"){
+                            $("#username_reg").val(" ")
+                        }
+
+                        if(type === "phone"){
+                            $("#phone_num").val(" ")
+                        }
+                        iziToast.warning({
+                                title: 'Agripool',
+                                message: `${data.info}`,
+                                position: 'topRight',
+                                transitionIn: 'flipInX',
+                                transitionOut: 'flipOutX',
+                            }
+                        );
+                    }
+                },
+                error:function(data){
+                    console.log(data);
+                }
+            })
+            }
+            else {
+                alert("password dont match")
+            }
+
+    });
+
+          $(".login-form").submit(function(event){
+        event.preventDefault();
+        addloader()
+         $.ajax({
+            url: "{% url 'shitty:user_second' %}",
+            method: "post",
+            data:{
+                type: "login",
+                username: $("#login_username").val(),
+                password: $("#login_password").val(),
+            },
+            success:function(data){
+                console.log(data);
+                removeloader()
+                if (data.message === "success"){
+                    window.location = "/dashboard/"
+                }
+                else {
+                     iziToast.warning({
+                            title: 'Agripool',
+                            message: `Wrong Credentials provided`,
+                            position: 'topRight',
+                            transitionIn: 'flipInX',
+                            transitionOut: 'flipOutX',
+                            }
+                            );
+                }
+            },
+            error:function(data){
+                alert("please check your internet connection")
+            }
+        })
+
+
+    })
+
+
+    </script>
+<script type="text/javascript">
+
+
+
+
+       function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+</script>
+
+
+</body>
+
+
+</html>
