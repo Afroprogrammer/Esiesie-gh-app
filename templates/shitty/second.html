@@ -235,11 +235,11 @@
                 console.log(data);
                 removeloader()
                 if (data.message === "success"){
-                    window.location = "/dashboard/"
+                    window.location = "{% url 'shitty:dashboard' %}"
                 }
                 else {
                      iziToast.warning({
-                            title: 'Agripool',
+                            title: 'SaniGH',
                             message: `Wrong Credentials provided`,
                             position: 'topRight',
                             transitionIn: 'flipInX',

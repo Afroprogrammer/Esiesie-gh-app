@@ -21,11 +21,15 @@
     <link href="{% static 'dashboard/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css' %}" rel="stylesheet">
     <link href="{% static 'dashboard/bower_components/slick-carousel/slick/slick.css' %}" rel="stylesheet">
     <link href="{% static 'dashboard/css/maince5a.css' %}" rel="stylesheet">
-{#    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />#}
+{#    <script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>#}
+{#    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />#}
+{#    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>#}
+{#    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />#}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
 {#    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>#}
 {#    <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>#}
 {#<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />#}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+{#    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />#}
     <link href="{% static 'dashboard/css/datedropper.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/loader.css' %}">
     <link rel="stylesheet" href="{% static 'css/iziToast.css' %}">
@@ -44,237 +48,117 @@
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Skip Intro</span><span class="os-icon os-icon-close"></span></button>
                     <div class="onboarding-slider-w">
                         <div class="onboarding-slide">
-                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/bigicon2.png' %}" width="200px"></div>
+                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/SANI.png' %}" width="200px"></div>
                             <div class="onboarding-content with-gradient">
                                 <h4 class="onboarding-title">Welcome to SaniGH!</h4>
                                 <div class="onboarding-text">We hope to make your de-sludging blah blah blah.</div>
                             </div>
                         </div>
 
+
                         <div class="onboarding-slide">
                             <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/bigicon5.png' %}" width="200px"></div>
                             <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Premises Details</h4>
-                                <div class="onboarding-text">Detials of Premises within which the tank is found should be inputed below </div>
+                                <h4 class="onboarding-title">Driver License Details</h4>
+                                <div class="onboarding-text">Input the name of gang leader/driver of Cesspool Emptier</div>
 
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="">House No</label>
-                                                <input id="house_no" class="form-control" placeholder="Enter your house no" type="text" value="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Ghana Post Address</label>
-                                                <input id="ghana_post" class="form-control" placeholder="Enter your house no" type="text" value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Select Municipality</label>
-                                                <select id="municipality" class="form-control">
-                                                    {% for foo in municipals %}
-                                                    <option value="{{ foo.id }}">{{ foo }}</option>
-                                                    {% endfor %}
-
+                                                <label for="">License Category</label>
+                                                <select name="license_category" id="license_category" class="form-control">
+                                                    <option value="A">A</option>
+                                                    <option value="B">C</option>
+                                                    <option value="C">C</option>
+                                                    <option value="D">D</option>
+                                                    <option value="E">E</option>
                                                 </select>
                                             </div>
                                         </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Date of Issue</label>
+                                                <input id="issue_date" name="issue_date" class="form-control" placeholder="Enter your house no" type="date" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Date of Expiry</label>
+                                                <input id="issue_expiry" name="exp_date" class="form-control" placeholder="Enter your house no" type="date" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Image of License</label>
+                                                <input id="image_license" name="license" class="form-control" placeholder="Enter your house no" type="file" value="">
+                                            </div>
+                                        </div>
+
                                     </div>
 
                             </div>
                         </div>
                         <div class="onboarding-slide">
-                            <div class="onboarding-media"><img alt="" src="img/bigicon6.png" width="200px"></div>
+                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/bigicon2.png' %}" width="200px"></div>
                             <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Household Details</h4>
+                                <h4 class="onboarding-title">Vehicle Details</h4>
                                 <div class="onboarding-text">Details of number of persons being served by the tank to be dislodge shold be inputed below</div>
 
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="">Number of Adults</label>
-                                                <input id="num_adults" class="form-control" placeholder="Number of Adults" type="number" value="">
+                                                <label for="">Vehicle Number</label>
+                                                <input id="vehicle_number" class="form-control" placeholder="Vehicle Number" type="text" value="">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="">Number of Children</label>
-                                                <input id="num_children" class="form-control" placeholder="Number of Occupants" type="number" value="">
+                                                <label for="">Vehicle Capacity In Litres</label>
+                                                <input id="vehicle_capacity" class="form-control" placeholder="Capacity" type="text" value="">
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="">Number of Household Users</label>
-                                                <input readonly id="household" class="form-control" placeholder="Number of Children" type="number" value="">
+                                                <label for="">Name of Vehicle Owner</label>
+                                                <input  id="name_of_owner" class="form-control" placeholder="Number of Owner" type="text" value="">
                                             </div>
                                         </div>
-
-
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Phone number of Owner</label>
+                                                <input  id="owner_tel" class="form-control" placeholder="Owner Tel" type="tel" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Business Operating Permit</label>
+                                                <input name="bpo" id="" class="form-control" placeholder="Owner Tel" type="file" value="">
+                                            </div>
+                                        </div>
 
                                     </div>
-
-                                <div class="row">
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Toilet Type</label>
-                                                <select id="tt" class="form-control">
-                                                    {% for foo in tt %}
-                                                    <option value="{{ foo.id }}">{{ foo }}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Containment Type</label>
-                                                <select id="ct" class="form-control">
-                                                    {% for foo in ct %}
-                                                    <option value="{{ foo.id }}">{{ foo }}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                        </div>
-
-{#                                    <div class="row">#}
-{#                                        <div class="col-md-4">#}
-{#                                            <div class="form-group">#}
-{#                                                    <label for="total_num_of_people"></label>#}
-{#                                                    <input id="num_children" class="form-control" placeholder="Number of Children" type="number" value="">#}
-{#                                        </div>#}
-{#                                        </div>#}
-{#                                        <div  class="col-sm-4">#}
-{#                                            <div class="form-group">#}
-{#                                                    <label for="total_num_of_people"></label>#}
-{#                                                    <input id="num_children" class="form-control" placeholder="Number of Household People" type="number" value="">#}
-{#    #}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                        <div class="col-sm-4">#}
-{#                                            <div class="form-group">#}
-{#                                                    <label for="total_num_of_people"></label>#}
-{#                                                    <input id="num_children" class="form-control" placeholder="Number of Children" type="number" value="">#}
-{#    #}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    </div>#}
-
-                                    </div>
-
-{#                                <div class="row">#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Fully Responsive design</li>#}
-{#                                            <li>Pre-built app layouts</li>#}
-{#                                            <li>Incredible Flexibility</li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Boxed & Full Layouts</li>#}
-{#                                            <li>Based on Bootstrap 4</li>#}
-{#                                            <li>Developer Friendly </li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                </div>#}
                             </div>
                         </div>
 
-
-
-                        <div class="onboarding-slide">
-                            <div class="onboarding-media"><img id="image_changer" alt="" src="img/bigicon6.png" width="200px"></div>
-                            <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Dimensions of Tank</h4>
-                                <div id="tank_dimensions_text" class="onboarding-text"></div>
-
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Length of Tank (m)</label>
-                                                <input id="len_con" class="form-control" placeholder="Length of Container" type="number" value="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Width of Tank (m)</label>
-                                                <input id="wid_con" class="form-control" placeholder="Width of Container" type="number" value="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Effective Depth (m)</label>
-                                                <input id="eff" class="form-control" placeholder="Effective Depth" type="number" value="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Volume of Sludge in Litres</label>
-                                                <input id="sludge_volume" class="form-control" placeholder="Volume of Sludge" type="number" value="">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Last Dislodge Date</label>
-                                                <input id="last_date" class="form-control" placeholder="Last Dislodge Date" type="date" value="">
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-{#                                <div class="row">#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Fully Responsive design</li>#}
-{#                                            <li>Pre-built app layouts</li>#}
-{#                                            <li>Incredible Flexibility</li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Boxed & Full Layouts</li>#}
-{#                                            <li>Based on Bootstrap 4</li>#}
-{#                                            <li>Developer Friendly </li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                </div>#}
-                            </div>
-                        </div>
 
                          <div class="onboarding-slide">
                             <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/SANI.png' %}"  width="200px"></div>
                             <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Submit Your  Form</h4>
-{#                                <div class="onboarding-text">Submit your form .</div>#}
+                                <h4 class="onboarding-title">Submit Your Form</h4>
+                                <div class="onboarding-text">By submitting this form, you agree to the Terms and Conditions of SaniGH Service Providers Code of Conduct and Health&Safety Services</div>
 
                                     <div class="row">
                                         <br>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <button id="submit_button" class="btn btn-primary" type="button"> Submit</button>
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
+                                                <button id="forms_submit_button" class="btn btn-primary" type="button"> Submit</button>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
@@ -288,24 +172,11 @@
 
 
 
-{#                                <div class="row">#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Fully Responsive design</li>#}
-{#                                            <li>Pre-built app layouts</li>#}
-{#                                            <li>Incredible Flexibility</li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Boxed & Full Layouts</li>#}
-{#                                            <li>Based on Bootstrap 4</li>#}
-{#                                            <li>Developer Friendly </li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                </div>#}
                             </div>
                         </div>
+
+
+
                     </div>
                 </div>
             </div>
@@ -402,7 +273,7 @@ START - Mobile Menu
 -------------------->
             <div class="menu-mobile menu-activated-on-click color-scheme-dark">
                 <div class="mm-logo-buttons-w">
-                    <a class="mm-logo" href="index.html"><img src="{% static 'dashboard/img/SANI.png' %}"><span>SaniGH</span></a>
+                    <a class="mm-logo" href="index.html"><img src="img/logo.png"><span>SaniGH</span></a>
                     <div class="mm-buttons">
                         <div class="content-panel-open">
                             <div class="os-icon os-icon-grid-circles"></div>
@@ -430,16 +301,39 @@ START - Mobile Menu List
                                     <div class="os-icon os-icon-layout"></div>
                                 </div><span>Dashboard</span></a>
                             <ul class="sub-menu">
-                                <li><a href="{% url 'shitty:dashboard' %}">Dashboard </a></li>
-                                <li><a href="{% url 'shitty:receipts' %}">Receipts </a></li>
-{#                                <li><a href="apps_crypto.html">Crypto Dashboard <strong class="badge badge-danger">Hot</strong></a></li>#}
-{#                                <li><a href="apps_support_dashboard.html">Dashboard 3</a></li>#}
-{#                                <li><a href="apps_projects.html">Dashboard 4</a></li>#}
-{#                                <li><a href="apps_bank.html">Dashboard 5</a></li>#}
-{#                                <li><a href="layouts_menu_top_image.html">Dashboard 6</a></li>#}
+                                <li><a href="index.html">Dashboard 1</a></li>
+                                <li><a href="apps_crypto.html">Crypto Dashboard <strong class="badge badge-danger">Hot</strong></a></li>
+                                <li><a href="apps_support_dashboard.html">Dashboard 3</a></li>
+                                <li><a href="apps_projects.html">Dashboard 4</a></li>
+                                <li><a href="apps_bank.html">Dashboard 5</a></li>
+                                <li><a href="layouts_menu_top_image.html">Dashboard 6</a></li>
                             </ul>
                         </li>
-
+                        <li class="has-sub-menu">
+                            <a href="layouts_menu_top_image.html">
+                                <div class="icon-w">
+                                    <div class="os-icon os-icon-layers"></div>
+                                </div><span>Menu Styles</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="layouts_menu_side_full.html">Side Menu Light</a></li>
+                                <li><a href="layouts_menu_side_full_dark.html">Side Menu Dark</a></li>
+                                <li><a href="layouts_menu_side_transparent.html">Side Menu Transparent <strong class="badge badge-danger">New</strong></a></li>
+                                <li><a href="apps_pipeline.html">Side &amp; Top Dark</a></li>
+                                <li><a href="apps_projects.html">Side &amp; Top</a></li>
+                                <li><a href="layouts_menu_side_mini.html">Mini Side Menu</a></li>
+                                <li><a href="layouts_menu_side_mini_dark.html">Mini Menu Dark</a></li>
+                                <li><a href="layouts_menu_side_compact.html">Compact Side Menu</a></li>
+                                <li><a href="layouts_menu_side_compact_dark.html">Compact Menu Dark</a></li>
+                                <li><a href="layouts_menu_right.html">Right Menu</a></li>
+                                <li><a href="layouts_menu_top.html">Top Menu Light</a></li>
+                                <li><a href="layouts_menu_top_dark.html">Top Menu Dark</a></li>
+                                <li><a href="layouts_menu_top_image.html">Top Menu Image <strong class="badge badge-danger">New</strong></a></li>
+                                <li><a href="layouts_menu_sub_style_flyout.html">Sub Menu Flyout</a></li>
+                                <li><a href="layouts_menu_sub_style_flyout_dark.html">Sub Flyout Dark</a></li>
+                                <li><a href="layouts_menu_sub_style_flyout_bright.html">Sub Flyout Bright</a></li>
+                                <li><a href="layouts_menu_side_compact_click.html">Menu Inside Click</a></li>
+                            </ul>
+                        </li>
 {#                        <li class="has-sub-menu">#}
 {#                            <a href="apps_bank.html">#}
 {#                                <div class="icon-w">#}
@@ -744,8 +638,15 @@ END - Messages Link in secondary top menu
                             <div class="sub-menu-icon"><i class="os-icon os-icon-layout"></i></div>
                             <div class="sub-menu-i">
                                 <ul class="sub-menu">
-                                    <li><a href="{% url 'shitty:dashboard' %}">Dashboard</a></li>
-                                    <li><a href="{% url 'shitty:receipts' %}">Receipts and Requests</a></li>
+{#                                    <li><a href="">Dashboard 1</a></li>#}
+                                     <li><a href="{% url 'shitty:driver_dashboard' %}">Dashboard</a></li>
+                                    <li><a href="{% url 'shitty:driver_dashboard_two' %}">Request Map</a></li>
+                                    <li><a href="{% url 'shitty:driver_receipt' %}"></a></li>
+{#                                    <li><a href="apps_crypto.html">Crypto Dashboard <strong class="badge badge-danger">Hot</strong></a></li>#}
+{#                                    <li><a href="apps_support_dashboard.html">Dashboard 3</a></li>#}
+{#                                    <li><a href="apps_projects.html">Dashboard 4</a></li>#}
+{#                                    <li><a href="apps_bank.html">Dashboard 5</a></li>#}
+{#                                    <li><a href="layouts_menu_top_image.html">Dashboard 6</a></li>#}
                                 </ul>
                             </div>
                         </div>
@@ -961,62 +862,62 @@ START - Top Menu Controls
                         <!--------------------
 START - Messages Link in secondary top menu
 -------------------->
-{#                        <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-mail-14"></i>#}
-{#                            <div class="new-messages-count">12</div>#}
-{#                            <div class="os-dropdown light message-list">#}
-{#                                <ul>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar1.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">John Mayers</h6>#}
-{#                                                <h6 class="message-title">Account Update</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar2.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">Phil Jones</h6>#}
-{#                                                <h6 class="message-title">Secutiry Updates</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar3.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">Bekky Simpson</h6>#}
-{#                                                <h6 class="message-title">Vacation Rentals</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar4.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">Alice Priskon</h6>#}
-{#                                                <h6 class="message-title">Payment Confirmation</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{#                        </div>#}
+                        <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-mail-14"></i>
+                            <div class="new-messages-count">12</div>
+                            <div class="os-dropdown light message-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar1.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">John Mayers</h6>
+                                                <h6 class="message-title">Account Update</h6></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar2.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">Phil Jones</h6>
+                                                <h6 class="message-title">Secutiry Updates</h6></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar3.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">Bekky Simpson</h6>
+                                                <h6 class="message-title">Vacation Rentals</h6></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar4.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">Alice Priskon</h6>
+                                                <h6 class="message-title">Payment Confirmation</h6></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <!--------------------
 END - Messages Link in secondary top menu
 -------------------->
                         <!--------------------
 START - Settings Link in secondary top menu
 -------------------->
-{#                        <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-ui-46"></i>#}
-{#                            <div class="os-dropdown">#}
-{#                                <div class="icon-w"><i class="os-icon os-icon-ui-46"></i></div>#}
-{#                                <ul>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-49"></i><span>Profile Settings</span></a></li>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-grid-10"></i><span>Billing Info</span></a></li>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-44"></i><span>My Invoices</span></a></li>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-15"></i><span>Cancel Account</span></a></li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{#                        </div>#}
+                        <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-ui-46"></i>
+                            <div class="os-dropdown">
+                                <div class="icon-w"><i class="os-icon os-icon-ui-46"></i></div>
+                                <ul>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-49"></i><span>Profile Settings</span></a></li>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-grid-10"></i><span>Billing Info</span></a></li>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-44"></i><span>My Invoices</span></a></li>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-15"></i><span>Cancel Account</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <!--------------------
 END - Settings Link in secondary top menu
 -------------------->
@@ -1083,19 +984,19 @@ END - Breadcrumbs
                                         </form>
                                     </div>
                                     <h6 class="element-header">Sales Dashboard</h6>
-                                    <div class="element-content">
-                                        <div class="row">
-                                            <div class="col-sm-4 col-xxxl-3">
-                                                <a class="element-box el-tablo" href="#">
-                                                    <div class="label">Products Sold</div>
-                                                    <div class="value">57</div>
-                                                    <div class="trending trending-up-basic"><span>12%</span><i class="os-icon os-icon-arrow-up2"></i></div>
-                                                </a>
-                                            </div>
+{#                                    <div class="element-content">#}
+{#                                        <div class="row">#}
+{#                                            <div class="col-sm-4 col-xxxl-3">#}
+{#                                                <a class="element-box el-tablo" href="#">#}
+{#                                                    <div class="label">Number of Request</div>#}
+{#                                                    <div class="value">{{ requests.count }}</div>#}
+{#                                                    <div class="trending trending-up-basic"><span>12%</span><i class="os-icon os-icon-arrow-up2"></i></div>#}
+{#                                                </a>#}
+{#                                            </div>#}
 {#                                            <div class="col-sm-4 col-xxxl-3">#}
 {#                                                <a class="element-box el-tablo" href="#">#}
 {#                                                    <div class="label">Gross Profit</div>#}
-{#                                                    <div class="value">$457</div>#}
+{#                                                    <div class="value">¢234</div>#}
 {#                                                    <div class="trending trending-down-basic"><span>12%</span><i class="os-icon os-icon-arrow-down"></i></div>#}
 {#                                                </a>#}
 {#                                            </div>#}
@@ -1113,201 +1014,139 @@ END - Breadcrumbs
 {#                                                    <div class="trending trending-up-basic"><span>12%</span><i class="os-icon os-icon-arrow-up2"></i></div>#}
 {#                                                </a>#}
 {#                                            </div>#}
-                                        </div>
-                                    </div>
+{#                                        </div>#}
+{#                                    </div>#}
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm-12 col-xxxl-12">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Dislodge Pattern </h6>
-                                    <div class="element-box">
-                                        <div class="os-tabs-w">
-                                            <div class="os-tabs-controls">
-                                                <ul class="nav nav-tabs smaller">
-                                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_overview">Overview</a></li>
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_sales">Sales</a></li>#}
-                                                </ul>
-{#                                                <ul class="nav nav-pills smaller d-none d-md-flex">#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Today</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">7 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">14 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Last Month</a></li>#}
-{#                                                </ul>#}
-                                            </div>
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="tab_overview">
-                                                    <div class="el-tablo bigger">
-{#                                                        <div class="label">Unique Visitors</div>#}
-{#                                                        <div class="value">12,537</div>#}
-                                                    </div>
-                                                    <div class="el-chart-w">
-                                                        <canvas height="350px" id="lineChart" width="600px"></canvas>
-                                                    </div>
-                                                </div>
-{#                                                <div class="tab-pane" id="tab_sales"></div>#}
-{#                                                <div class="tab-pane" id="tab_conversion"></div>#}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-{#                                                    <div id='map' style='width: 600px; height: 350px;'></div>#}
-                            <div hidden class="col-sm-12 col-xxxl-12">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Map Location  </h6>
-                                    <p id="out"></p>
-{#                                    <div class="element-box">#}
-{#                                        <div class="os-tabs-w">#}
-{#                                            <div class="os-tabs-controls">#}
-{#                                                <ul class="nav nav-tabs smaller">#}
-{#                                                    <li class="nav-item"><a class="nav-link active" activedata-toggle="tab" href="#tab_overview">Overview</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_sales">Sales</a></li>#}
-{#                                                </ul>#}
-{#                                                <ul class="nav nav-pills smaller d-none d-md-flex">#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Today</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">7 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">14 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Last Month</a></li>#}
-{#                                                </ul>#}
-{#                                            </div>#}
-{#                                            <div class="tab-content">#}
-{#                                                <div class="tab-pane active" id="tab_overview">#}
-{#                                                     <div id="map" class="map map-home" style="height: 300px; margin-top: 50px"></div>#}
-{##}
-{#                                                    <div id='map' style='width: 600px; height: 350px;'></div>#}
-{##}
-{#                                                    <div class="el-chart-w">#}
-{#                                                        <canvas height="350px" id="lineChart" width="600px"></canvas>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                                <div class="tab-pane" id="tab_sales"></div>#}
-{#                                                <div class="tab-pane" id="tab_conversion"></div>#}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    </div>#}
-                                </div>
-                            </div>
-{#                            <div class="d-none d-xxxl-block col-xxxl-3">#}
-{#                                <div class="element-wrapper">#}
-{#                                    <h6 class="element-header">Visitors by Browser</h6>#}
-{#                                    <div class="element-box less-padding">#}
-{#                                        <div class="el-chart-w">#}
-{#                                            <canvas height="120" id="donutChart1" width="120"></canvas>#}
-{#                                            <div class="inside-donut-chart-label"><strong>1,248</strong><span>Visitors</span></div>#}
-{#                                        </div>#}
-{#                                        <div class="el-legend condensed">#}
-{#                                            <div class="row">#}
-{#                                                <div class="col-auto col-xxxxl-6 ml-sm-auto mr-sm-auto">#}
-{#                                                    <div class="legend-value-w">#}
-{#                                                        <div class="legend-pin legend-pin-squared" style="background-color: #6896f9;"></div>#}
-{#                                                        <div class="legend-value"><span>Safari</span>#}
-{#                                                            <div class="legend-sub-value">17%, 12 Visits</div>#}
-{#                                                        </div>#}
-{#                                                    </div>#}
-{#                                                    <div class="legend-value-w">#}
-{#                                                        <div class="legend-pin legend-pin-squared" style="background-color: #85c751;"></div>#}
-{#                                                        <div class="legend-value"><span>Chrome</span>#}
-{#                                                            <div class="legend-sub-value">22%, 763 Visits</div>#}
-{#                                                        </div>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                                <div class="col-sm-6 d-none d-xxxxl-block">#}
-{#                                                    <div class="legend-value-w">#}
-{#                                                        <div class="legend-pin legend-pin-squared" style="background-color: #806ef9;"></div>#}
-{#                                                        <div class="legend-value"><span>Firefox</span>#}
-{#                                                            <div class="legend-sub-value">3%, 7 Visits</div>#}
-{#                                                        </div>#}
-{#                                                    </div>#}
-{#                                                    <div class="legend-value-w">#}
-{#                                                        <div class="legend-pin legend-pin-squared" style="background-color: #d97b70;"></div>#}
-{#                                                        <div class="legend-value"><span>Explorer</span>#}
-{#                                                            <div class="legend-sub-value">15%, 45 Visits</div>#}
-{#                                                        </div>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
+
+{#                        <input hidden id="id_gps_location" type="text">#}
+{#                        <div class='overlay'>#}
+{#                                <button id='replay'>Replay</button>#}
 {#                            </div>#}
-                        </div>
-                        {% if not accepted_requests %}
-                        <input hidden id="id_gps_location" type="text">
-                    <div class="pt-btn"><a id="request_dislodge" class="btn btn-success btn-sm" href="">Cesspool Request  Assistant</a></div>
-                            <br>
-                    <div class="pt-btn">
-                        <a  class="btn btn-warning " id="biogester_request">BioDigester Request Assistant </a>
-{#                        <a id="request_dislodge" class="btn btn-success btn-sm" href="">Biodigester Request Assistant</a>#}
-                    </div>
-                            <br>
+                    <div class="pt-btn"><a id="request_dislodge" class="btn btn-success btn-sm" href="">Request Assistant</a></div>
+<br>
                          <div id="map_canvas" class="map map-home"  style="height: 700px">
-                             .............................................................................................
                          </div>
-                        {% endif %}
+
 
 
                         <!--------------------
 START - Color Scheme Toggler
 -------------------->
-{#                        <div class="floated-colors-btn second-floated-btn">#}
-{#                            <div class="os-toggler-w">#}
-{#                                <div class="os-toggler-i">#}
-{#                                    <div class="os-toggler-pill"></div>#}
-{#                                </div>#}
-{#                            </div><span>Dark </span><span>Colors</span></div>#}
+                        <div class="floated-colors-btn second-floated-btn">
+                            <div class="os-toggler-w">
+                                <div class="os-toggler-i">
+                                    <div class="os-toggler-pill"></div>
+                                </div>
+                            </div><span>Dark </span><span>Colors</span></div>
                         <!--------------------
 END - Color Scheme Toggler
 -------------------->
                         <!--------------------
 START - Demo Customizer
 -------------------->
-{#                        <div class="floated-customizer-btn third-floated-btn">#}
-{#                            <div class="icon-w"><i class="os-icon os-icon-ui-46"></i></div><span>Customizer</span></div>#}
-{#                        <div class="floated-customizer-panel">#}
-{#                            <div class="fcp-content">#}
-{#                                <div class="close-customizer-btn"><i class="os-icon os-icon-x"></i></div>#}
-{#                                <div class="fcp-group">#}
-{#                                    <div class="fcp-group-header">Menu Settings</div>#}
-{#                                    <div class="fcp-group-contents">#}
-{#                                        <div class="fcp-field">#}
-{#                                            <label for="">Menu Position</label>#}
-{#                                            <select class="menu-position-selector">#}
-{#                                                <option value="left">Left</option>#}
-{#                                                <option value="right">Right</option>#}
-{#                                                <option value="top">Top</option>#}
-{#                                            </select>#}
-{#                                        </div>#}
-{#                                        <div class="fcp-field">#}
-{#                                            <label for="">Menu Style</label>#}
-{#                                            <select class="menu-layout-selector">#}
-{#                                                <option value="compact">Compact</option>#}
-{#                                                <option value="full">Full</option>#}
-{#                                                <option value="mini">Mini</option>#}
-{#                                            </select>#}
-{#                                        </div>#}
-{#                                        <div class="fcp-field with-image-selector-w">#}
-{#                                            <label for="">With Image</label>#}
-{#                                            <select class="with-image-selector">#}
-{#                                                <option value="yes">Yes</option>#}
-{#                                                <option value="no">No</option>#}
-{#                                            </select>#}
-{#                                        </div>#}
-{#                                        <div class="fcp-field">#}
-{#                                            <label for="">Menu Color</label>#}
-{#                                            <div class="fcp-colors menu-color-selector">#}
-{#                                                <div class="color-selector menu-color-selector color-bright selected"></div>#}
-{#                                                <div class="color-selector menu-color-selector color-dark"></div>#}
-{#                                                <div class="color-selector menu-color-selector color-light"></div>#}
-{#                                                <div class="color-selector menu-color-selector color-transparent"></div>#}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
+                        <div class="floated-customizer-btn third-floated-btn">
+                            <div class="icon-w"><i class="os-icon os-icon-ui-46"></i></div><span>Customizer</span></div>
+                        <div class="floated-customizer-panel">
+                            <div class="fcp-content">
+                                <div class="close-customizer-btn"><i class="os-icon os-icon-x"></i></div>
+                                <div class="fcp-group">
+                                    <div class="fcp-group-header">Menu Settings</div>
+                                    <div class="fcp-group-contents">
+                                        <div class="fcp-field">
+                                            <label for="">Menu Position</label>
+                                            <select class="menu-position-selector">
+                                                <option value="left">Left</option>
+                                                <option value="right">Right</option>
+                                                <option value="top">Top</option>
+                                            </select>
+                                        </div>
+                                        <div class="fcp-field">
+                                            <label for="">Menu Style</label>
+                                            <select class="menu-layout-selector">
+                                                <option value="compact">Compact</option>
+                                                <option value="full">Full</option>
+                                                <option value="mini">Mini</option>
+                                            </select>
+                                        </div>
+                                        <div class="fcp-field with-image-selector-w">
+                                            <label for="">With Image</label>
+                                            <select class="with-image-selector">
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="fcp-field">
+                                            <label for="">Menu Color</label>
+                                            <div class="fcp-colors menu-color-selector">
+                                                <div class="color-selector menu-color-selector color-bright selected"></div>
+                                                <div class="color-selector menu-color-selector color-dark"></div>
+                                                <div class="color-selector menu-color-selector color-light"></div>
+                                                <div class="color-selector menu-color-selector color-transparent"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fcp-group">
+                                    <div class="fcp-group-header">Sub Menu</div>
+                                    <div class="fcp-group-contents">
+                                        <div class="fcp-field">
+                                            <label for="">Sub Menu Style</label>
+                                            <select class="sub-menu-style-selector">
+                                                <option value="flyout">Flyout</option>
+                                                <option value="inside">Inside/Click</option>
+                                                <option value="over">Over</option>
+                                            </select>
+                                        </div>
+                                        <div class="fcp-field">
+                                            <label for="">Sub Menu Color</label>
+                                            <div class="fcp-colors">
+                                                <div class="color-selector sub-menu-color-selector color-bright selected"></div>
+                                                <div class="color-selector sub-menu-color-selector color-dark"></div>
+                                                <div class="color-selector sub-menu-color-selector color-light"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fcp-group">
+                                    <div class="fcp-group-header">Other Settings</div>
+                                    <div class="fcp-group-contents">
+                                        <div class="fcp-field">
+                                            <label for="">Full Screen?</label>
+                                            <select class="full-screen-selector">
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="fcp-field">
+                                            <label for="">Show Top Bar</label>
+                                            <select class="top-bar-visibility-selector">
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="fcp-field">
+                                            <label for="">Above Menu?</label>
+                                            <select class="top-bar-above-menu-selector">
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="fcp-field">
+                                            <label for="">Top Bar Color</label>
+                                            <div class="fcp-colors">
+                                                <div class="color-selector top-bar-color-selector color-bright selected"></div>
+                                                <div class="color-selector top-bar-color-selector color-dark"></div>
+                                                <div class="color-selector top-bar-color-selector color-light"></div>
+                                                <div class="color-selector top-bar-color-selector color-transparent"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!--------------------
 END - Demo Customizer
 -------------------->
@@ -1354,79 +1193,108 @@ END - Chat Popup Box
                     <!--------------------
 START - Sidebar
 -------------------->
-                    <div class="content-panel">
-                        <div class="content-panel-close"><i class="os-icon os-icon-close"></i></div>
-                        <div class="element-wrapper">
-                            <h6 class="element-header">Quick Links</h6>
-                            <div class="element-box-tp">
-                                <div class="el-buttons-list full-width">
-                                    <a id="open_map" class="btn btn-white btn-sm" href="#">
-                                        <i class="os-icon os-icon-delivery-box-2"></i>
-                                        <span>Request New Train</span>
-                                    </a>
+{#                    <div class="content-panel">#}
+{#                        <div class="content-panel-close"><i class="os-icon os-icon-close"></i></div>#}
+{#                        <div class="element-wrapper">#}
+{#                            <h6 class="element-header">Quick Links</h6>#}
+{#                            <div class="element-box-tp">#}
+{#                                <div class="el-buttons-list full-width">#}
+{#                                    <a id="open_map" class="btn btn-white btn-sm" href="#">#}
+{#                                        <i class="os-icon os-icon-delivery-box-2"></i>#}
+{#                                        <span>Request New Train</span>#}
+{#                                    </a>#}
 {#                                    <a class="btn btn-white btn-sm" href="#"><i class="os-icon os-icon-window-content"></i><span>Customer Comments</span></a>#}
 {#                                    <a class="btn btn-white btn-sm" href="#"><i class="os-icon os-icon-wallet-loaded"></i><span>Store Settings</span></a>#}
-                                </div>
-                            </div>
-                        </div>
-                        <!--------------------
-START - Support Agents
--------------------->
-                        <div class="element-wrapper">
-                            <h6 class="element-header">Accepted Requests</h6>
-                            <div class="element-box-tp">
-                                {% if accepted_requests.accepted_driver is not None %}
-                                <div class="profile-tile">
-                                    <a class="profile-tile-box" href="">
-                                        <div class="pt-avatar-w"><img alt="" src="{% static 'dashboard/img/user.png' %}"></div>
-                                        <div class="pt-user-name"></div>
-                                    </a>
-                                    <div class="profile-tile-meta">
-                                        <ul>
-                                            <li>Driver Name:<strong>{{ accepted_requests.accepted_driver.name }}</strong></li>
-                                            <li>Car Number:<strong><a href="">{{ accepted_requests.accepted_driver.vehicle.vehicle_number }}</a></strong></li>
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!--------------------#}
+{#START - Support Agents#}
+{#-------------------->#}
+{#                        <div class="element-wrapper">#}
+{#                            <h6 class="element-header">Support Agents</h6>#}
+{#                            <div class="element-box-tp">#}
+{#                                <div class="profile-tile">#}
+{#                                    <a class="profile-tile-box" href="users_profile_small.html">#}
+{#                                        <div class="pt-avatar-w"><img alt="" src="img/avatar1.jpg"></div>#}
+{#                                        <div class="pt-user-name">John Mayers</div>#}
+{#                                    </a>#}
+{#                                    <div class="profile-tile-meta">#}
+{#                                        <ul>#}
+{#                                            <li>Last Login:<strong>Online Now</strong></li>#}
+{#                                            <li>Tickets:<strong><a href="apps_support_index.html">12</a></strong></li>#}
 {#                                            <li>Response Time:<strong>2 hours</strong></li>#}
-                                        </ul>
-                                        <div class="pt-btn"><a onclick="payWithRave()" class="btn btn-success btn-sm">Initiate Payment</a></div>
-                                    </div>
-                                </div>
-                                {% endif %}
-
-
-                            </div>
-                        </div>
-                        <!--------------------
-END - Support Agents
--------------------->
-                        <!--------------------
-START - Recent Activity
--------------------->
-                        <div class="element-wrapper">
-                            <h6 class="element-header">Recent Disludge Activity</h6>
-                            <div class="element-box-tp">
-                                {% for dislodged_date in dislodged_dates %}
-                                <div class="activity-boxes-w">
-                                    <div class="activity-box-w">
-                                        <div class="activity-time">o</div>
-                                        <div class="activity-box">
-                                            <div class="activity-avatar"><img alt="" src="img/avatar1.jpg"></div>
-                                            <div class="activity-info">
-                                                <div class="activity-role">{{ dislodged_date.driver.name }}</div><strong class="activity-title">{{ dislodged_date.date }}</strong></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                {% endfor %}
-
-
-                            </div>
-                        </div>
-                        <!--------------------
-END - Recent Activity
--------------------->
-                        <!--------------------
-START - Team Members
--------------------->
+{#                                        </ul>#}
+{#                                        <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="profile-tile">#}
+{#                                    <a class="profile-tile-box" href="users_profile_small.html">#}
+{#                                        <div class="pt-avatar-w"><img alt="" src="img/avatar3.jpg"></div>#}
+{#                                        <div class="pt-user-name">Ben Gossman</div>#}
+{#                                    </a>#}
+{#                                    <div class="profile-tile-meta">#}
+{#                                        <ul>#}
+{#                                            <li>Last Login:<strong>Offline</strong></li>#}
+{#                                            <li>Tickets:<strong><a href="apps_support_index.html">9</a></strong></li>#}
+{#                                            <li>Response Time:<strong>3 hours</strong></li>#}
+{#                                        </ul>#}
+{#                                        <div class="pt-btn"><a class="btn btn-secondary btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!--------------------#}
+{#END - Support Agents#}
+{#-------------------->#}
+{#                        <!--------------------#}
+{#START - Recent Activity#}
+{#-------------------->#}
+{#                        <div class="element-wrapper">#}
+{#                            <h6 class="element-header">Recent Disludge Activity</h6>#}
+{#                            <div class="element-box-tp">#}
+{#                                <div class="activity-boxes-w">#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">10 Min</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar1.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">John Mayers</div><strong class="activity-title">Opened New Account</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">2 Hours</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar2.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">Ben Gossman</div><strong class="activity-title">Posted Comment</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">5 Hours</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar3.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">Phil Nokorin</div><strong class="activity-title">Opened New Account</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">2 Days</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar4.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">Jenny Miksa</div><strong class="activity-title">Uploaded Image</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!--------------------#}
+{#END - Recent Activity#}
+{#-------------------->#}
+{#                        <!--------------------#}
+{#START - Team Members#}
+{#-------------------->#}
 {#                        <div class="element-wrapper">#}
 {#                            <h6 class="element-header">Team Members</h6>#}
 {#                            <div class="element-box-tp">#}
@@ -1485,41 +1353,34 @@ START - Team Members
 {#                                </div>#}
 {#                            </div>#}
 {#                        </div>#}
-                        <!--------------------
-END - Team Members
--------------------->
-                    </div>
+{#                        <!--------------------#}
+{#END - Team Members#}
+{#-------------------->#}
+{#                    </div>#}
                     <!--------------------
 END - Sidebar
 -------------------->
                 </div>
             </div>
         </div>
-    <div aria-hidden="true" class="onboarding-modal modal fade animated" id="atm_request_book_modal" role="dialog" tabindex="-1">
+    <div aria-hidden="true" class="onboarding-modal modal fade animated" id="book_modal" role="dialog" tabindex="-1">
                                         <div class="modal-dialog modal-centered" role="document">
                                             <div class="modal-content text-center">
                                                 <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Abort</span><span class="os-icon os-icon-close"></span></button>
 {#                                                <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>#}
 
                                                  <div class="onboarding-slider-w">
-                        <div class="onboarding-slide">
-                            <div class="onboarding-media"><img  alt="" src="{% static 'dashboard/img/drainage.png' %}"  width="200px"></div>
-                            <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Dislodge Request</h4>
-                                <div class="onboarding-text">Please follow the instructions in the form to request </div>
-                            </div>
-                        </div>
-
-
 
                              <div class="onboarding-slide">
-                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/drainage.png' %}" width="200px"></div>
+                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>
                             <div class="onboarding-content with-gradient">
                                 <h4 class="onboarding-title">Request Sheet</h4>
                                 <div id="tank_dimensions_text" class="onboarding-text"></div>
-                            <form id="request_invoice_form">
+                            <form id="accept_invoice_form">
                                     <div class="row">
                                         <div class="col-sm-6">
+                                            <input hidden id="request_id" class="form-control" placeholder="Length of Container" type="text" value="">
+
                                             <div class="form-group">
                                                 <label for="">Name of User</label>
                                                 <input readonly id="name_of_user" class="form-control" placeholder="Length of Container" type="text" value="">
@@ -1528,7 +1389,7 @@ END - Sidebar
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label for="">Name of Community</label>
+                                                <label for="">Name of Containment Type</label>
                                                 <input readonly id="name_of_comm" class="form-control" placeholder="Width of Container" type="text" value="">
                                             </div>
                                         </div>
@@ -1537,6 +1398,12 @@ END - Sidebar
                                             <div class="form-group">
                                                 <label for="">Volume of Sludge in Litres</label>
                                                 <input readonly id="request_sludge_volume" class="form-control" placeholder="Volume of Sludge" type="number" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">Name of Community</label>
+                                                <input readonly id="request_com_name" class="form-control" placeholder="Volume of Sludge" type="text" value="">
                                             </div>
                                         </div>
 
@@ -1559,138 +1426,7 @@ END - Sidebar
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group">
-                                                <button  id="submit_button" class="btn btn-primary" type="submit"> Submit</button>
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    </form>
-
-
-{#                                <div class="row">#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Fully Responsive design</li>#}
-{#                                            <li>Pre-built app layouts</li>#}
-{#                                            <li>Incredible Flexibility</li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Boxed & Full Layouts</li>#}
-{#                                            <li>Based on Bootstrap 4</li>#}
-{#                                            <li>Developer Friendly </li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                </div>#}
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-{#                                                <div style="margin-top: -15%" class="onboarding-content with-gradient">#}
-{#                                                    <h4 class="onboarding-title">Dislodge Request</h4>#}
-{#                                                    <div class="onboarding-text">Are you sure you tank is full?</div>#}
-{#                                                    <form id="atm_card_request" >#}
-{##}
-{#                                                        <div class="form-group">#}
-{#                                                                <label for="">Select the respective answer</label>#}
-{#                                                                <select id="atm_card_account" required class="form-control">#}
-{#                                                                         <option value="yes">YES</option>#}
-{#                                                                </select>#}
-{#                                                            </div>#}
-{##}
-{##}
-{##}
-{##}
-{##}
-{#                                                     <div class="row">#}
-{##}
-{##}
-{#                                                                 <br>#}
-{#                                                                 </div>#}
-{#                                                                                 <div class="modal-footer">#}
-{#                                                                        <button type="submit" class="btn btn-primary"><i class="os-icon os-icon-send"></i>Submit Form</button>#}
-{#                                                                    </div>#}
-{##}
-{##}
-{##}
-{#                                                             </form>#}
-{#                                                </div>#}
-
-                                            </div>
-                                        </div>
-</div>
-    <div aria-hidden="true" class="onboarding-modal modal fade animated" id="biogas_request_book_modal" role="dialog" tabindex="-1">
-                                        <div class="modal-dialog modal-centered" role="document">
-                                            <div class="modal-content text-center">
-                                                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Abort</span><span class="os-icon os-icon-close"></span></button>
-{#                                                <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>#}
-
-                                                 <div class="onboarding-slider-w">
-                        <div class="onboarding-slide">
-                            <div class="onboarding-media"><img  alt="" src="{% static 'dashboard/img/truck.png' %}"  width="200px"></div>
-                            <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Service Request</h4>
-                                <div class="onboarding-text">Please follow the instructions in the form to request </div>
-                            </div>
-                        </div>
-
-
-
-                             <div class="onboarding-slide">
-                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>
-                            <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Request Sheet</h4>
-                                <div id="tank_dimensions_text" class="onboarding-text"></div>
-                            <form id="request_biogas_form">
-                                    <div class="row">
-
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Comment </label>
-                                                <input id="request_comment" class="form-control" placeholder="Comment" type="text" value="">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Toilet Type</label>
-                                                <select id="type_of_toitet" class="form-control">
-                                                    <option value="Full Flush">Full Flush</option>
-                                                    <option value="Micro Flush">Micro Flush</option>
-                                                    <option value="Large Digester">Large Digester</option>
-                                                    <option value="Standard Digester">Standard Digester</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <div class="row">
-                                        <br>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <button  id="submit_button" class="btn btn-primary" type="submit"> Submit</button>
+                                                <button id="accept_request" class="btn btn-primary" type="submit">Accept Request</button>
 {#                                                <label for="">Last Dislodge Date</label>#}
 {#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
 {#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
@@ -1802,253 +1538,56 @@ END - Sidebar
     <script src="{% static 'dashboard/js/datedropper.js' %}"></script>
     <script src="{% static 'js/iziToast.js' %}"></script>
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
-{#    <script src='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>#}
-<script>
-
-     $('#loader').click(function () {
-                console.log("clicked")
-                $(this).removeClass("is-active")
-            });
-
-            function addloader(){
-                 console.log("showing loader")
-                 $('#loader').addClass("loader loader-default is-active")
-            }
-
-            function removeloader(){
-            console.log("removing the loader");
-            setTimeout(()=>{
-                    $('#loader').removeClass("is-active")
-                 },500)
-            }
-    const API_publicKey = "FLWPUBK-47b6c16fc7013b57dfa97ea8c03fa3e8-X";
-    const card_ref_code = "{{ accepted_requests.id }}";
-    function payWithRave() {
-        {#var invoice_list = [];#}
-       {#var invoice_grand_total = 0;#}
-       {# var card_total_price = $("#final_total").html();#}
-        var x = getpaidSetup({
-            PBFPubKey: "FLWPUBK-60aee28116bf32c8b13f87890590515b-X",
-            customer_email: "{{ accepted_requests.profile.user.email }}",
-            {#amount: 2,#}
-            amount: 1-((1.8/100)*1),
-            {#amount: 1,#}
-            customer_phone: "{{ accepted_requests.profile.phone }}",
-            currency: "GHS",
-            country: "GH",
-            payment_method: "both",
-            txref: card_ref_code,
-            meta: [{
-                metaname: card_ref_code,
-                metavalue: "AP1234",
-            }],
-            onclose: function() {},
-            callback: function(response) {
-                var txref = response.tx.txRef; // collect txRef returned and pass to a 					server page to complete status check.
-                console.log("This is the response returned after a charge", response);
-                if (
-                    response.tx.chargeResponseCode == "00" ||
-                    response.tx.chargeResponseCode == "0"
-                ) {
-                   iziToast.info({
-                    title: 'SaniGH',
-                    message: `Card Charge was successfully`,
-                    position: 'topRight',
-                    transitionIn: 'flipInX',
-                    transitionOut: 'flipOutX',
-                        });
-
-                     iziToast.info({
-                    title: 'SaniGH',
-                    message: `Please wait,finalizing transaction`,
-                    position: 'topRight',
-                    transitionIn: 'flipInX',
-                    transitionOut: 'flipOutX',
-                        })
-                    addloader()
-                    $.ajax({
-                        url: "{% url 'shitty:paid' %}",
-                        method: "post",
-                        data:{
-                            ref_code : card_ref_code,
-                        },
-                        success:function(data){
-                            removeloader()
-                            if (data.message === "success"){
-                                window.location = "{% url 'shitty:receipts' %}";
-                                    }
-
-                        },
-                        error:function(data){
-                            removeloader();
-                             iziToast.warning({
-                            title: 'SaniGH',
-                            message: `Please check your internet connection`,
-                            position: 'topRight',
-                            transitionIn: 'flipInX',
-                            transitionOut: 'flipOutX',
-                                })
-                        }
-                    })
-
-                    // redirect to a success page
-                } else {
-                    iziToast.warning({
-                            title: 'SaniGH',
-                            message: `OOPs!!!.. Failure,Card couldn't be processed`,
-                            position: 'topRight',
-                            transitionIn: 'flipInX',
-                            transitionOut: 'flipOutX',
-                                })
-                    // redirect to a failure page.
-                }
-
-                x.close(); // use this to close the modal immediately after payment.
-            }
-        });
-    }
-</script>
-<script type="text/javascript">
+{#    <script src="{% static 'js/geodesc.js' %}"></script>#}
+{#<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js' charset='utf-8'></script>#}
+{##}
+{#    <script type="text/javascript" src='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>#}
+    <script type="text/javascript">
         $(document).ready(function () {
-
-
-            $('#loader').click(function () {
-                console.log("clicked")
-                $(this).removeClass("is-active")
-            });
-
-            function addloader(){
-                 console.log("showing loader")
-                 $('#loader').addClass("loader loader-default is-active")
-            }
-
-            function removeloader(){
-            console.log("removing the loader");
-            setTimeout(()=>{
-                    $('#loader').removeClass("is-active")
-                 },500)
-            }
-        {#initialize()#}
-            $('#id_day').dateDropper();
-        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-		osmAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">Powered by Leafletjs OpenStreetMap</a> contributors',
-		osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-
-	    var map = L.map('map_canvas').setView([5.55602, -0.1969], 15).addLayer(osm);
-            L.marker([5.55602,-0.1969],{
-            draggable: true,
-            })
-            .addTo(map).on('drag', function (event) {
-            console.log(event.latlng);
-            var lat = event.latlng.lat;
-            var lng = event.latlng.lng;
-            $('#id_gps_location').val(lat+','+lng)
-        }).openPopup();
 
         console.log("man's not hot");
 
-        var num_of_house_hold = 0;
-        $("#num_adults").blur(function () {
-            num_of_house_hold+=parseInt($(this).val())
-            $("#household").val(num_of_house_hold)
-        });
+        $('#loader').click(function () {
+                console.log("clicked")
+                $(this).removeClass("is-active")
+            });
 
-        $("#num_children").blur(function () {
-        num_of_house_hold+=parseInt($(this).val())
-        $("#household").val(num_of_house_hold)
-
-        });
-
-        $("#len_con").focus(function () {
-            $("#tank_dimensions_text").html("Measure the longest side of tank in the surface view")
-            $("#image_changer").attr("src","/static/dashboard/img/lenth.png");
-            {#$("#image_changer").attr("src","/static/dashboard/img/output_WAUMfr.gif");#}
-
-        });
-
-        $("#wid_con").focus(function () {
-            $("#tank_dimensions_text").html("Measure the shortest side of the tank in the surface view ")
-            $("#image_changer").attr("src","/static/dashboard/img/width.png");
-
-        });
-
-        $("#eff").focus(function () {
-            $("#tank_dimensions_text").html("Measure from the base of tank to the top of water level")
-            $("#image_changer").attr("src","/static/dashboard/img/output_WAUMfr.gif");
-        });
-
-
-        var volume_of_sludge = 0;
-        $("#eff").blur(function () {
-            var wid_con = parseInt($("#wid_con").val())
-            var len_con = parseInt($("#len_con").val())
-            var effective_depth = parseInt($("#eff").val())
-            var volume = (wid_con * len_con* effective_depth) * 1000
-            $("#sludge_volume").val(volume)
-            {#m3 * 1000#}
-        });
-
-
-
-
-        $("#open_map").click(function () {
-            if (navigator.geolocation) {
-                    var optn = {
-                    enableHighAccuracy : true,
-                    timeout : Infinity,
-                    maximumAge : 0
-                };
-
-             navigator.geolocation.getCurrentPosition(showPosition, showError, optn);
-
-                } else {
-                alert('Geolocation is not supported inx your browser');
+            function addloader(){
+                 console.log("showing loader")
+                 $('#loader').addClass("loader loader-default is-active")
             }
-        });
 
-        $('#atm_request_book_modal').on('show.bs.modal', function (event) {
-               console.log("opening request assistant modal")
-               global_button = $(':focus');
-               var button = $(event.relatedTarget) // Button that triggered the modal
-               global_button = button
-               {#var recipient = button.data('whatever') // Extract info from data-* attributes#}
-                var modal = $(this)
-                var gps_location = $("#id_gps_location").val()
-                addloader()
-                $.ajax({
-                    url: "{% url 'shitty:dashboard' %}",
-                    method: "post",
-                    data:{
-                        type: "request_dislodge",
-                        gps_location: gps_location
-                    },
-                    success:function(data){
-                            removeloader()
-                        $("#name_of_user").val(data.name)
-                        $("#name_of_comm").val(data.community)
-                        $("#request_sludge_volume").val(data.volume)
-                        $("#cost_of_transaction").val('¢ '+data.total_cost)
-                            console.log(data);
-                    },
-                    error:function(data){
-                        console.log(data);
-                    }
-                });
-               {#console.log(recipient);#}
-                {#inv_id = recipient#}
-        {#console.log(inv_id,"investigations id");#}
-        {#patient = button.data('patient_id')#}
-        {#doctor = button.data('doctor_id')#}
-        {#console.log(patient,"patient id")#}
-       {#$('#inv_patient').val(button.data('patient'))#}
-       {#$('#inv_doctor').val(button.data('doctor'))#}
-       {#$('#inv_type').val(button.data('type'))#}
-       {#$('#inv_amount').val(button.data('amount'))#}
-       {# var table = $('#invest_modal_table').DataTable()#}
+            function removeloader(){
+            console.log("removing the loader");
+            setTimeout(()=>{
+                    $('#loader').removeClass("is-active")
+            },500)
+            }
 
 
-    });
+        $("#accept_invoice_form").submit(function (event) {
+            event.preventDefault();
+            console.log("accept this request");
+            addloader()
+            $.ajax({
+                url: "{% url 'shitty:driver_dashboard' %}",
+                method: "post",
+                data:{
+                    type: "accept_request",
+                    id: $("#request_id").val()
+                },
+                success:function(data){
+                    removeloader()
+                    console.log(data);
+                     $("#book_modal").modal("hide")
+                    window.location ='{% url 'shitty:driver_dashboard_two' %}';
+                },
+                error:function(data){
+
+                }
+            })
+        })
+
 
         $("#request_invoice_form").submit(function (event) {
             event.preventDefault();
@@ -2079,54 +1618,8 @@ END - Sidebar
                 })
             }
             console.log("submitting the request sheet");
-        });
-
-
-        $("#request_biogas_form").submit(function (event) {
-            event.preventDefault();
-            if (confirm("do you want to submit this request")){
-                addloader()
-                $.ajax({
-                    url: "{% url 'shitty:dashboard' %}",
-                    method: "post",
-                    data:{
-                        type:"biogas_request",
-                        request_comment: $("#request_comment").val(),
-                        type_of_toilet: $("#type_of_toitet").val(),
-
-                    },
-                    success:function(data){
-                        removeloader()
-                         iziToast.warning({
-                            title: 'Request',
-                           position: 'topRight',
-                            message: 'Request has been sent successfully'
-                            });
-                        $("#biogas_request_book_modal").modal("hide");
-                        console.log(data);
-                    },
-                    error:function(data){
-                        removeloader()
-                        console.log(data)
-                    }
-                })
-            }
-            console.log("submitting the request sheet");
         })
 
-
-        $("#request_dislodge").click(function (event) {
-            event.preventDefault();
-             $('#atm_request_book_modal').modal("show")
-                navigator.vibrate([500]);
-            });
-
-
-        $("#biogester_request").click(function (event) {
-            event.preventDefault();
-             $('#biogas_request_book_modal').modal("show")
-                navigator.vibrate([500]);
-            });
 
 
          function showError(error) {
@@ -2149,66 +1642,33 @@ END - Sidebar
          function showPosition(position) {
              console.log(position);
              console.log("showing position",position.coords.latitude, " ",position.coords.longitude);
-                map.setView([position.coords.latitude,position.coords.longitude]).addLayer(osm);
+             map.setView([position.coords.latitude,position.coords.longitude]).addLayer(osm);
              console.log(map);
-             {#var newLatLng = new L.LatLng(lat, lng);#}
-                {#marker.setLatLng(newLatLng);#}
-                {#map.marker.setLatLng([position.coords.latitude,position.coords.longitude])#}
-                {#map.marker.setLatLng(e.latlng);#}
-                {#map.panTo(new L.LatLng(position.coords.latitude, position.coords.longitude));#}
                     }
                 })
 
 
-        var first_time = '{{ user.first_time }}'
+        var first_time = '{{ driver.first_time }}'
             console.log(first_time)
         if(first_time === 'True'){
             $('#first_time_modal').modal('show');
         }
 
-
-
-        $("#submit_button").click(function () {
-            if (confirm("save details")){
-            $.ajax({
-                url: "{% url 'shitty:dashboard' %}",
-                method: "post",
-                data:{
-                    type:"update",
-                    house_no: $("#house_no").val(),
-                    ghana_post: $("#ghana_post").val(),
-                    municipality: $("#municipality").val(),
-                    num_adults: $("#num_adults").val(),
-                    num_children: $("#num_children").val(),
-                    tt: $("#tt").val(),
-                    ct: $("#ct").val(),
-                    len_con: $("#len_con").val(),
-                    wid_con: $("#wid_con").val(),
-                    eff: $("#eff").val(),
-                    last_date: $("#last_date").val(),
-                    num_of_litres:$("#sludge_volume").val()
-
-                },
-                success:function(data){
-                    console.log(data);
-                    if (data.message === "success"){
-                    $('#first_time_modal').modal('hide');
-                    }
-                },
-                error:function(data){
-                    console.log(data);
-                }
-            })
-            }
-        })
     </script>
+
+
 <script type="text/javascript">
-         $("#bid_button").submit(function (event) {
-            event.preventDefault()
-            console.log("bidding for toilet");
-        });
+    var map = L.map('map_canvas').setView([5.55602, -0.1969], 15);
 
-    </script>
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([5.55602, -0.1962]).addTo(map)
+L.marker([5.55602, -0.2222]).addTo(map)
+</script>
+
+
 </body>
 
 </html>

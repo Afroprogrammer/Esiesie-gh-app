@@ -1,28 +1,21 @@
 /*global $, console*/
 
 $(function () {
-   
+
     'use strict';
-    
+
     ////// page side animation
-    
+
     $('.login-section').on('click', function () {
             window.location = "/driver/"
-        // $(this).addClass('section-open');
-        // $('.login-section').removeClass('section-close');
-        // $('.signup-section').addClass('section-close');
-        // $('.signup-section').removeClass('section-open');
+    });
+
+    $('.loggin-section').on('click', function () {
+            window.location = "/biogas/"
     });
 
     $('.signup-section').on('click', function () {
-        // $(this).addClass('section-open');
             window.location = "/user/"
-
-        // $('.signup-section').removeClass('section-close');
-        // $('.login-section').addClass('section-close');
-        // $('.login-section').removeClass('section-open');
-        // $('.login-form').slideDown();
-        // $('.forget-form').slideUp();
     });
 
     ////// custom placeholder
@@ -35,7 +28,7 @@ $(function () {
             input.removeClass('hide-placeholder');
         }
     });
-    
+
     //// forget password
 
     $('.login-page_forget a').on('click', function (e) {

@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1712d4ad-b942-46a7-aea4-23e44b68ee7d" name="Default Changelist" comment="" />
+    <list default="true" id="1712d4ad-b942-46a7-aea4-23e44b68ee7d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/dashboard/css/invoice.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/js/geodesc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/js/route/leaflet-routing-machine.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/js/route/leaflet-routing-machine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/js/route/leaflet-routing-machine.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/js/route/leaflet.routing.icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/js/route/leaflet.routing.icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shitty/static/js/route/routing-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shitty/biogas_register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shitty/driver_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shitty/driver_dashboard_two.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shitty/driver_receipt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shitty/receipt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shitty/tipping.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shitty/user_receipts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/static/css/login-page_responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/static/css/login-page_responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/static/css/login-page_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/static/css/login-page_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/static/js/iziToast.js" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/static/js/iziToast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/static/js/reg.js" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/static/js/reg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shitty/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shitty/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shitty/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shitty/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shitty/driver_second.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shitty/driver_second.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shitty/reg_screen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shitty/reg_screen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shitty/second.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shitty/second.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,59 +56,59 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="8" />
-          <entry key="html" value="18" />
-          <entry key="js" value="11" />
-          <entry key="py" value="20" />
+          <entry key="css" value="12" />
+          <entry key="html" value="66" />
+          <entry key="js" value="15" />
+          <entry key="py" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
-          <entry key="HTML" value="18" />
-          <entry key="JavaScript" value="11" />
-          <entry key="Python" value="20" />
+          <entry key="CSS" value="12" />
+          <entry key="HTML" value="66" />
+          <entry key="JavaScript" value="15" />
+          <entry key="Python" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="4883" />
-          <entry key="js" value="32" />
-          <entry key="py" value="3058" />
+          <entry key="css" value="17" />
+          <entry key="html" value="9653" />
+          <entry key="js" value="54" />
+          <entry key="py" value="6646" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="4883" />
-          <entry key="JavaScript" value="32" />
-          <entry key="Python" value="3058" />
+          <entry key="CSS" value="17" />
+          <entry key="HTML" value="9653" />
+          <entry key="JavaScript" value="54" />
+          <entry key="Python" value="6646" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.312">
+    <splitter split-orientation="horizontal" split-proportion="0.49066666">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/shitty/admin.py">
+            <entry file="file://$PROJECT_DIR$/shitty/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="460">
-                  <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="759">
+                  <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/shitty/views.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/shitty/reg_screen.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="427">
-                  <caret line="155" column="15" lean-forward="true" selection-start-line="155" selection-start-column="15" selection-end-line="155" selection-end-column="15" />
+                <state relative-caret-position="-659">
+                  <caret line="114" column="79" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
                   <folding>
-                    <element signature="e#0#35#0" expanded="true" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                   </folding>
                 </state>
               </provider>
@@ -85,31 +117,21 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/shitty/second.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="552">
-                  <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="24" />
+                <state relative-caret-position="927">
+                  <caret line="233" column="22" selection-end-line="300" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/shitty/reg_screen.html">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/shitty/dashboard.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/shitty/__init__.py">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/shitty/urls.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="529">
-                  <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+                <state relative-caret-position="502">
+                  <caret line="2132" lean-forward="true" selection-start-line="2132" selection-end-line="2132" />
+                  <folding>
+                    <element signature="e#129943#131780#0#HTML" />
+                    <element signature="e#131843#133033#0#HTML" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -117,31 +139,25 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.55006033">
+        <splitter split-orientation="horizontal" split-proportion="0.5">
           <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <leaf>
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/templates/shitty/dashboard.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="134">
-                      <caret line="1948" column="57" selection-start-line="1948" selection-start-column="57" selection-end-line="1948" selection-end-column="57" />
-                      <folding>
-                        <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                        <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                        <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                        <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                      </folding>
+                    <state relative-caret-position="433">
+                      <caret line="1143" column="36" lean-forward="true" selection-start-line="1143" selection-start-column="36" selection-end-line="1143" selection-end-column="36" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/shitty/models.py">
+                <entry file="file://$PROJECT_DIR$/shitty/views.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="459">
-                      <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+                    <state relative-caret-position="467">
+                      <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
                       <folding>
-                        <element signature="e#0#28#0" expanded="true" />
+                        <element signature="e#0#35#0" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -152,10 +168,13 @@
           <split-second>
             <leaf>
               <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/templates/shitty/dashboard.html">
+                <entry file="file://$PROJECT_DIR$/shitty/models.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="364">
-                      <caret line="1669" column="146" selection-start-line="1669" selection-start-column="146" selection-end-line="1669" selection-end-column="146" />
+                    <state relative-caret-position="1824">
+                      <caret line="141" selection-start-line="141" selection-end-line="141" />
+                      <folding>
+                        <element signature="e#0#28#0" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -171,43 +190,43 @@
       <list>
         <option value="CSS File" />
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onboarding</find>
-      <find>Example Request Information</find>
-      <find>chat</find>
-      <find>show-on-load</find>
-      <find>municipality</find>
-      <find>Dislodge</find>
-      <find>login-form</find>
+      <find>number of</find>
+      <find>def driver_tipping</find>
+      <find>def das</find>
+      <find>Request Map</find>
       <find>map</find>
-      <find>element-box</find>
+      <find>payWithRave</find>
+      <find>accept_request</find>
+      <find>Sales Dashboard</find>
+      <find>def driver_das</find>
       <find>map_canvas</find>
-      <find>show_map</find>
-      <find>open_map</find>
-      <find>id_gps_location</find>
-      <find>send message</find>
-      <find>showing the map</find>
-      <find>gps_location</find>
-      <find>vue</find>
-      <find>wid_con</find>
-      <find>request_dislodge</find>
+      <find>request.session['house_location']</find>
+      <find>login</find>
+      <find>def ind</find>
+      <find>signup-section</find>
       <find>def index</find>
+      <find>Request Assistant</find>
+      <find>hidden</find>
+      <find>request_dislodge</find>
       <find>first_time_modal</find>
-      <find>modal</find>
-      <find>onboarding-modal</find>
-      <find>loc</find>
-      <find>def inde</find>
-      <find>loader</find>
+      <find>wid_con</find>
+      <find>Biodi</find>
+      <find>biogester_request</find>
+      <find>Customizer</find>
+      <find>Support Agents</find>
+      <find>&lt;select</find>
+      <find>request_book</find>
       <find>atm_request_book_modal</find>
-      <find>name_of_user</find>
-      <find>Dis</find>
-      <find>Length</find>
+      <find>def dashb</find>
+      <find>biogas_request_book_modal</find>
+      <find>Dashboard 1</find>
     </findStrings>
     <replaceStrings>
       <replace>{% static 'dashboard/bower_components' %}</replace>
@@ -217,28 +236,40 @@
       <replace>.js' %}&quot;</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/shittrain/urls.py" />
         <option value="$PROJECT_DIR$/shittrain/settings.py" />
         <option value="$PROJECT_DIR$/templates/admin/base_site.html" />
-        <option value="$PROJECT_DIR$/shitty/static/css/login-page_style.css" />
-        <option value="$PROJECT_DIR$/shitty/static/js/reg.js" />
-        <option value="$PROJECT_DIR$/templates/shitty/driver_second.html" />
         <option value="$PROJECT_DIR$/shitty/static/css/loader.css" />
         <option value="$PROJECT_DIR$/shitty/static/css/iziToast.css" />
         <option value="$PROJECT_DIR$/shitty/static/js/iziToast.js" />
-        <option value="$PROJECT_DIR$/shitty/forms.py" />
-        <option value="$PROJECT_DIR$/shitty/urls.py" />
         <option value="$PROJECT_DIR$/shitty/static/dashboard/js/maince5a.js" />
         <option value="$PROJECT_DIR$/shitty/static/dashboard/js/vue.min.js" />
+        <option value="$PROJECT_DIR$/templates/shitty/driver_second.html" />
+        <option value="$PROJECT_DIR$/shitty/static/js/geodesc.js" />
         <option value="$PROJECT_DIR$/templates/shitty/second.html" />
+        <option value="$PROJECT_DIR$/templates/shitty/receipt.html" />
+        <option value="$PROJECT_DIR$/templates/shitty/user_receipts.html" />
+        <option value="$PROJECT_DIR$/templates/shitty/driver_receipt.html" />
+        <option value="$PROJECT_DIR$/templates/shitty/tipping.html" />
+        <option value="$PROJECT_DIR$/templates/shitty/driver_dashboard_two.html" />
+        <option value="$PROJECT_DIR$/shitty/static/css/login-page_responsive.css" />
+        <option value="$PROJECT_DIR$/shitty/static/css/login-page_style.css" />
+        <option value="$PROJECT_DIR$/shitty/static/js/reg.js" />
+        <option value="$PROJECT_DIR$/templates/shitty/biogas_register.html" />
+        <option value="$PROJECT_DIR$/shitty/forms.py" />
         <option value="$PROJECT_DIR$/templates/shitty/reg_screen.html" />
-        <option value="$PROJECT_DIR$/shitty/admin.py" />
-        <option value="$PROJECT_DIR$/shitty/views.py" />
+        <option value="$PROJECT_DIR$/shitty/urls.py" />
+        <option value="$PROJECT_DIR$/templates/shitty/driver_dashboard.html" />
         <option value="$PROJECT_DIR$/shitty/models.py" />
+        <option value="$PROJECT_DIR$/shitty/views.py" />
         <option value="$PROJECT_DIR$/templates/shitty/dashboard.html" />
+        <option value="$PROJECT_DIR$/shitty/admin.py" />
       </list>
     </option>
   </component>
@@ -249,11 +280,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="882" />
-    <option name="y" value="456" />
-    <option name="width" value="2898" />
-    <option name="height" value="1749" />
+    <option name="x" value="639" />
+    <option name="y" value="30" />
+    <option name="width" value="2907" />
+    <option name="height" value="1764" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -281,6 +313,13 @@
               <item name="shittrain" type="462c0819:PsiDirectoryNode" />
               <item name="shitty" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shittrain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shittrain" type="462c0819:PsiDirectoryNode" />
+              <item name="shitty" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shittrain" type="b2602c69:ProjectViewProjectNode" />
@@ -318,10 +357,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\shitty\static\dashboard\css" />
-      <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\shitty\static\dashboard\js" />
-      <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\templates\shitty" />
+      <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\shitty\static\js\route" />
       <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\shitty\static\js" />
-      <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\shitty\static" />
+      <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\shitty\static\css" />
+      <recent name="C:\Users\Kojo Mcroni\shittrain\shittrain\shitty\static\dashboard\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -384,7 +423,7 @@
     <frame x="-7" y="-7" width="1935" height="1175" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.09813333" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13386667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -396,8 +435,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297244" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973333" visible="true" weight="0.3031496" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002667" side_tool="true" visible="true" weight="0.3031496" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973333" visible="true" weight="0.3031496" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002667" side_tool="true" weight="0.3031496" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3297244" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -437,26 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shitty/static/css/login-page_demo.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shitty/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shitty/static/css/login-page_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="403" column="30" selection-start-line="403" selection-start-column="30" selection-end-line="403" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shitty/static/css/loader.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -471,31 +490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shitty/static/js/iziToast.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="17553" selection-start-line="5" selection-start-column="17553" selection-end-line="5" selection-end-column="17553" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shitty/driver_second.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2967">
-          <caret line="129" column="7" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/shitty/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1702">
           <caret line="74" column="42" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shitty/static/js/reg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -543,44 +541,157 @@
     <entry file="file://$PROJECT_DIR$/shitty/static/dashboard/css/datedropper.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/shitty/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shitty/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/shitty/admin.py">
+    <entry file="file://$PROJECT_DIR$/shitty/static/js/iziToast.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="23">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/static/js/geodesc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="476" column="16" lean-forward="true" selection-start-line="476" selection-start-column="16" selection-end-line="476" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/driver_second.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="196" column="25" lean-forward="true" selection-start-line="196" selection-start-column="25" selection-end-line="196" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/static/dashboard/css/invoice.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="56" lean-forward="true" selection-start-column="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/receipt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/user_receipts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16760">
+          <caret line="421" column="26" lean-forward="true" selection-start-line="421" selection-start-column="26" selection-end-line="421" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/driver_receipt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="770" selection-start-line="770" selection-end-line="771" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/tipping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="1660" column="59" lean-forward="true" selection-start-line="1660" selection-start-column="43" selection-end-line="1660" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/static/css/login-page_demo.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/static/css/login-page_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3335">
+          <caret line="193" column="14" lean-forward="true" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#167#295#0" />
+            <element signature="e#312#524#0" />
+            <element signature="e#547#566#0" />
+            <element signature="e#590#899#0" />
+            <element signature="e#1457#1766#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/static/css/login-page_responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/second.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="233" column="22" selection-end-line="300" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+            <marker date="1542573749093" expanded="true" signature="297:302" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/shitty/reg_screen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+        <state relative-caret-position="-659">
+          <caret line="114" column="79" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shitty/second.html">
+    <entry file="file://$PROJECT_DIR$/shitty/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="759">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/driver_dashboard_two.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="1666" column="82" selection-start-line="1666" selection-start-column="82" selection-end-line="1666" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/driver_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="1393" column="29" lean-forward="true" selection-start-line="1393" selection-start-column="29" selection-end-line="1393" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/static/js/reg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shitty/biogas_register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="108" column="32" lean-forward="true" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shitty/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="1824">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -589,23 +700,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shitty/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="155" column="15" lean-forward="true" selection-start-line="155" selection-start-column="15" selection-end-line="155" selection-end-column="15" />
+        <state relative-caret-position="467">
+          <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shitty/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/shitty/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="1948" column="57" selection-start-line="1948" selection-start-column="57" selection-end-line="1948" selection-end-column="57" />
+        <state relative-caret-position="502">
+          <caret line="2132" lean-forward="true" selection-start-line="2132" selection-end-line="2132" />
           <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#129943#131780#0#HTML" />
+            <element signature="e#131843#133033#0#HTML" />
           </folding>
         </state>
       </provider>

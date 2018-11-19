@@ -7,7 +7,13 @@ class ProFileForm(forms.ModelForm):
         model = Profile
         fields ="__all__"
 
-# class ContactForm(forms.ModelForm):
-#     class Meta:
-#         model = Message
-#         fields = "__all__"
+
+class DriverForm(forms.ModelForm):
+    class Meta:
+        model = Driver
+        fields = "__all__"
+
+
+class BioServices(forms.ModelForm):
+    class Meta:
+        fields = "__all__"

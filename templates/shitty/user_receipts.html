@@ -190,7 +190,7 @@
 
 
                         <div class="onboarding-slide">
-                            <div class="onboarding-media"><img id="image_changer" alt="" src="img/bigicon6.png" width="200px"></div>
+                            <div class="onboarding-media"><img alt="" src="img/bigicon6.png" width="200px"></div>
                             <div class="onboarding-content with-gradient">
                                 <h4 class="onboarding-title">Dimensions of Tank</h4>
                                 <div id="tank_dimensions_text" class="onboarding-text"></div>
@@ -404,9 +404,9 @@ START - Mobile Menu
                 <div class="mm-logo-buttons-w">
                     <a class="mm-logo" href="index.html"><img src="{% static 'dashboard/img/SANI.png' %}"><span>SaniGH</span></a>
                     <div class="mm-buttons">
-                        <div class="content-panel-open">
-                            <div class="os-icon os-icon-grid-circles"></div>
-                        </div>
+{#                        <div class="content-panel-open">#}
+{#                            <div class="os-icon os-icon-grid-circles"></div>#}
+{#                        </div>#}
                         <div class="mobile-menu-trigger">
                             <div class="os-icon os-icon-hamburger-menu-1"></div>
                         </div>
@@ -414,7 +414,7 @@ START - Mobile Menu
                 </div>
                 <div class="menu-and-user">
                     <div class="logged-user-w">
-                        <div class="avatar-w"><img alt="" src="img/avatar1.jpg"></div>
+                        <div class="avatar-w"><img alt="" src="{% static 'dashboard/img/SANI.png' %}"></div>
                         <div class="logged-user-info-w">
 {#                            <div class="logged-user-name">Maria Gomez</div>#}
 {#                            <div class="logged-user-role">Administrator</div>#}
@@ -430,16 +430,36 @@ START - Mobile Menu List
                                     <div class="os-icon os-icon-layout"></div>
                                 </div><span>Dashboard</span></a>
                             <ul class="sub-menu">
-                                <li><a href="{% url 'shitty:dashboard' %}">Dashboard </a></li>
-                                <li><a href="{% url 'shitty:receipts' %}">Receipts </a></li>
-{#                                <li><a href="apps_crypto.html">Crypto Dashboard <strong class="badge badge-danger">Hot</strong></a></li>#}
-{#                                <li><a href="apps_support_dashboard.html">Dashboard 3</a></li>#}
-{#                                <li><a href="apps_projects.html">Dashboard 4</a></li>#}
-{#                                <li><a href="apps_bank.html">Dashboard 5</a></li>#}
-{#                                <li><a href="layouts_menu_top_image.html">Dashboard 6</a></li>#}
+                                <li><a href="{% url 'shitty:dashboard' %}">Dashboard</a></li>
+                                <li><a href="{% url 'shitty:receipts' %}">Receipts</a></li>
+{#                                <li><a href="">Dashboard 6</a></li>#}
                             </ul>
                         </li>
-
+{#                        <li class="has-sub-menu">#}
+{#                            <a href="layouts_menu_top_image.html">#}
+{#                                <div class="icon-w">#}
+{#                                    <div class="os-icon os-icon-layers"></div>#}
+{#                                </div><span>Menu Styles</span></a>#}
+{#                            <ul class="sub-menu">#}
+{#                                <li><a href="layouts_menu_side_full.html">Side Menu Light</a></li>#}
+{#                                <li><a href="layouts_menu_side_full_dark.html">Side Menu Dark</a></li>#}
+{#                                <li><a href="layouts_menu_side_transparent.html">Side Menu Transparent <strong class="badge badge-danger">New</strong></a></li>#}
+{#                                <li><a href="apps_pipeline.html">Side &amp; Top Dark</a></li>#}
+{#                                <li><a href="apps_projects.html">Side &amp; Top</a></li>#}
+{#                                <li><a href="layouts_menu_side_mini.html">Mini Side Menu</a></li>#}
+{#                                <li><a href="layouts_menu_side_mini_dark.html">Mini Menu Dark</a></li>#}
+{#                                <li><a href="layouts_menu_side_compact.html">Compact Side Menu</a></li>#}
+{#                                <li><a href="layouts_menu_side_compact_dark.html">Compact Menu Dark</a></li>#}
+{#                                <li><a href="layouts_menu_right.html">Right Menu</a></li>#}
+{#                                <li><a href="layouts_menu_top.html">Top Menu Light</a></li>#}
+{#                                <li><a href="layouts_menu_top_dark.html">Top Menu Dark</a></li>#}
+{#                                <li><a href="layouts_menu_top_image.html">Top Menu Image <strong class="badge badge-danger">New</strong></a></li>#}
+{#                                <li><a href="layouts_menu_sub_style_flyout.html">Sub Menu Flyout</a></li>#}
+{#                                <li><a href="layouts_menu_sub_style_flyout_dark.html">Sub Flyout Dark</a></li>#}
+{#                                <li><a href="layouts_menu_sub_style_flyout_bright.html">Sub Flyout Bright</a></li>#}
+{#                                <li><a href="layouts_menu_side_compact_click.html">Menu Inside Click</a></li>#}
+{#                            </ul>#}
+{#                        </li>#}
 {#                        <li class="has-sub-menu">#}
 {#                            <a href="apps_bank.html">#}
 {#                                <div class="icon-w">#}
@@ -744,8 +764,8 @@ END - Messages Link in secondary top menu
                             <div class="sub-menu-icon"><i class="os-icon os-icon-layout"></i></div>
                             <div class="sub-menu-i">
                                 <ul class="sub-menu">
-                                    <li><a href="{% url 'shitty:dashboard' %}">Dashboard</a></li>
-                                    <li><a href="{% url 'shitty:receipts' %}">Receipts and Requests</a></li>
+                                    <li><a href="{% url 'shitty:dashboard' %}">Dashboard 1</a></li>
+                                    <li><a href="{% url 'shitty:receipts' %}">Receipts</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -961,62 +981,62 @@ START - Top Menu Controls
                         <!--------------------
 START - Messages Link in secondary top menu
 -------------------->
-{#                        <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-mail-14"></i>#}
-{#                            <div class="new-messages-count">12</div>#}
-{#                            <div class="os-dropdown light message-list">#}
-{#                                <ul>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar1.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">John Mayers</h6>#}
-{#                                                <h6 class="message-title">Account Update</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar2.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">Phil Jones</h6>#}
-{#                                                <h6 class="message-title">Secutiry Updates</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar3.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">Bekky Simpson</h6>#}
-{#                                                <h6 class="message-title">Vacation Rentals</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <div class="user-avatar-w"><img alt="" src="img/avatar4.jpg"></div>#}
-{#                                            <div class="message-content">#}
-{#                                                <h6 class="message-from">Alice Priskon</h6>#}
-{#                                                <h6 class="message-title">Payment Confirmation</h6></div>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{#                        </div>#}
+                        <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-mail-14"></i>
+                            <div class="new-messages-count">12</div>
+                            <div class="os-dropdown light message-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar1.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">John Mayers</h6>
+                                                <h6 class="message-title">Account Update</h6></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar2.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">Phil Jones</h6>
+                                                <h6 class="message-title">Secutiry Updates</h6></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar3.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">Bekky Simpson</h6>
+                                                <h6 class="message-title">Vacation Rentals</h6></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="user-avatar-w"><img alt="" src="img/avatar4.jpg"></div>
+                                            <div class="message-content">
+                                                <h6 class="message-from">Alice Priskon</h6>
+                                                <h6 class="message-title">Payment Confirmation</h6></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <!--------------------
 END - Messages Link in secondary top menu
 -------------------->
                         <!--------------------
 START - Settings Link in secondary top menu
 -------------------->
-{#                        <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-ui-46"></i>#}
-{#                            <div class="os-dropdown">#}
-{#                                <div class="icon-w"><i class="os-icon os-icon-ui-46"></i></div>#}
-{#                                <ul>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-49"></i><span>Profile Settings</span></a></li>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-grid-10"></i><span>Billing Info</span></a></li>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-44"></i><span>My Invoices</span></a></li>#}
-{#                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-15"></i><span>Cancel Account</span></a></li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{#                        </div>#}
+                        <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left"><i class="os-icon os-icon-ui-46"></i>
+                            <div class="os-dropdown">
+                                <div class="icon-w"><i class="os-icon os-icon-ui-46"></i></div>
+                                <ul>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-49"></i><span>Profile Settings</span></a></li>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-grid-10"></i><span>Billing Info</span></a></li>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-44"></i><span>My Invoices</span></a></li>
+                                    <li><a href="users_profile_small.html"><i class="os-icon os-icon-ui-15"></i><span>Cancel Account</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <!--------------------
 END - Settings Link in secondary top menu
 -------------------->
@@ -1087,9 +1107,9 @@ END - Breadcrumbs
                                         <div class="row">
                                             <div class="col-sm-4 col-xxxl-3">
                                                 <a class="element-box el-tablo" href="#">
-                                                    <div class="label">Products Sold</div>
-                                                    <div class="value">57</div>
-                                                    <div class="trending trending-up-basic"><span>12%</span><i class="os-icon os-icon-arrow-up2"></i></div>
+                                                    <div class="label">De-sludge Count</div>
+                                                    <div class="value">{{ requests.count  }}</div>
+{#                                                    <div class="trending trending-up-basic"><span>12%</span><i class="os-icon os-icon-arrow-up2"></i></div>#}
                                                 </a>
                                             </div>
 {#                                            <div class="col-sm-4 col-xxxl-3">#}
@@ -1120,76 +1140,44 @@ END - Breadcrumbs
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-12 col-xxxl-12">
+                            <div class="col-md-10 col-xxxl-12">
                                 <div class="element-wrapper">
-                                    <h6 class="element-header">Dislodge Pattern </h6>
+                                    <h6 class="element-header">Requests</h6>
                                     <div class="element-box">
-                                        <div class="os-tabs-w">
-                                            <div class="os-tabs-controls">
-                                                <ul class="nav nav-tabs smaller">
-                                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_overview">Overview</a></li>
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_sales">Sales</a></li>#}
-                                                </ul>
-{#                                                <ul class="nav nav-pills smaller d-none d-md-flex">#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Today</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">7 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">14 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Last Month</a></li>#}
-{#                                                </ul>#}
-                                            </div>
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="tab_overview">
-                                                    <div class="el-tablo bigger">
-{#                                                        <div class="label">Unique Visitors</div>#}
-{#                                                        <div class="value">12,537</div>#}
-                                                    </div>
-                                                    <div class="el-chart-w">
-                                                        <canvas height="350px" id="lineChart" width="600px"></canvas>
-                                                    </div>
-                                                </div>
-{#                                                <div class="tab-pane" id="tab_sales"></div>#}
-{#                                                <div class="tab-pane" id="tab_conversion"></div>#}
-                                            </div>
-                                        </div>
+                                               <div class="table-responsive">
+                                 <table id="investigations_table" class="table table-padded data_tables">
+                                        <thead>
+                                            <tr>
+                                                 <th class="text-center">Accepted Driver</th>
+                                                 <th class="text-center">Amount</th>
+                                                 <th>Volume</th>
+                                                 <th>Cost of Transaction</th>
+                                                 <th class="text-center">Action</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% if requests %}
+                                        {% for foo in requests %}
+                                            <tr>
+                                            <td>{{ foo.accepted_driver }}</td>
+                                            <td>{{ foo.total_cost }}</td>
+                                            <td>{{ foo.volume_cost }}</td>
+                                            <td>{{ foo }}</td>
+                                            <td><a data-id="{{ foo.id }}"  class="btn btn-warning report_one"  id="">View Request </a></td>
+                                            </tr>
+                                        {% endfor %}
+                                            {% endif %}
+
+                                        </tbody>
+                                    </table>
+                        </div>
                                     </div>
                                 </div>
+{#                                <br><br><br><br><br><br><br><br><br>#}
                             </div>
 {#                                                    <div id='map' style='width: 600px; height: 350px;'></div>#}
-                            <div hidden class="col-sm-12 col-xxxl-12">
-                                <div class="element-wrapper">
-                                    <h6 class="element-header">Map Location  </h6>
-                                    <p id="out"></p>
-{#                                    <div class="element-box">#}
-{#                                        <div class="os-tabs-w">#}
-{#                                            <div class="os-tabs-controls">#}
-{#                                                <ul class="nav nav-tabs smaller">#}
-{#                                                    <li class="nav-item"><a class="nav-link active" activedata-toggle="tab" href="#tab_overview">Overview</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_sales">Sales</a></li>#}
-{#                                                </ul>#}
-{#                                                <ul class="nav nav-pills smaller d-none d-md-flex">#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Today</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#">7 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">14 Days</a></li>#}
-{#                                                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#">Last Month</a></li>#}
-{#                                                </ul>#}
-{#                                            </div>#}
-{#                                            <div class="tab-content">#}
-{#                                                <div class="tab-pane active" id="tab_overview">#}
-{#                                                     <div id="map" class="map map-home" style="height: 300px; margin-top: 50px"></div>#}
-{##}
-{#                                                    <div id='map' style='width: 600px; height: 350px;'></div>#}
-{##}
-{#                                                    <div class="el-chart-w">#}
-{#                                                        <canvas height="350px" id="lineChart" width="600px"></canvas>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                                <div class="tab-pane" id="tab_sales"></div>#}
-{#                                                <div class="tab-pane" id="tab_conversion"></div>#}
-{#                                            </div>#}
-{#                                        </div>#}
-{#                                    </div>#}
-                                </div>
-                            </div>
+
 {#                            <div class="d-none d-xxxl-block col-xxxl-3">#}
 {#                                <div class="element-wrapper">#}
 {#                                    <h6 class="element-header">Visitors by Browser</h6>#}
@@ -1234,19 +1222,6 @@ END - Breadcrumbs
 {#                                </div>#}
 {#                            </div>#}
                         </div>
-                        {% if not accepted_requests %}
-                        <input hidden id="id_gps_location" type="text">
-                    <div class="pt-btn"><a id="request_dislodge" class="btn btn-success btn-sm" href="">Cesspool Request  Assistant</a></div>
-                            <br>
-                    <div class="pt-btn">
-                        <a  class="btn btn-warning " id="biogester_request">BioDigester Request Assistant </a>
-{#                        <a id="request_dislodge" class="btn btn-success btn-sm" href="">Biodigester Request Assistant</a>#}
-                    </div>
-                            <br>
-                         <div id="map_canvas" class="map map-home"  style="height: 700px">
-                             .............................................................................................
-                         </div>
-                        {% endif %}
 
 
                         <!--------------------
@@ -1354,79 +1329,98 @@ END - Chat Popup Box
                     <!--------------------
 START - Sidebar
 -------------------->
-                    <div class="content-panel">
-                        <div class="content-panel-close"><i class="os-icon os-icon-close"></i></div>
-                        <div class="element-wrapper">
-                            <h6 class="element-header">Quick Links</h6>
-                            <div class="element-box-tp">
-                                <div class="el-buttons-list full-width">
-                                    <a id="open_map" class="btn btn-white btn-sm" href="#">
-                                        <i class="os-icon os-icon-delivery-box-2"></i>
-                                        <span>Request New Train</span>
-                                    </a>
+{#                    <div class="content-panel">#}
+{#                        <div class="content-panel-close"><i class="os-icon os-icon-close"></i></div>#}
+{#                        <div class="element-wrapper">#}
+{#                            <h6 class="element-header">Quick Links</h6>#}
+{#                            <div class="element-box-tp">#}
+{#                                <div class="el-buttons-list full-width">#}
+{#                                    <a id="open_map" class="btn btn-white btn-sm" href="#">#}
+{#                                        <i class="os-icon os-icon-delivery-box-2"></i>#}
+{#                                        <span>Request New Train</span>#}
+{#                                    </a>#}
 {#                                    <a class="btn btn-white btn-sm" href="#"><i class="os-icon os-icon-window-content"></i><span>Customer Comments</span></a>#}
 {#                                    <a class="btn btn-white btn-sm" href="#"><i class="os-icon os-icon-wallet-loaded"></i><span>Store Settings</span></a>#}
-                                </div>
-                            </div>
-                        </div>
-                        <!--------------------
-START - Support Agents
--------------------->
-                        <div class="element-wrapper">
-                            <h6 class="element-header">Accepted Requests</h6>
-                            <div class="element-box-tp">
-                                {% if accepted_requests.accepted_driver is not None %}
-                                <div class="profile-tile">
-                                    <a class="profile-tile-box" href="">
-                                        <div class="pt-avatar-w"><img alt="" src="{% static 'dashboard/img/user.png' %}"></div>
-                                        <div class="pt-user-name"></div>
-                                    </a>
-                                    <div class="profile-tile-meta">
-                                        <ul>
-                                            <li>Driver Name:<strong>{{ accepted_requests.accepted_driver.name }}</strong></li>
-                                            <li>Car Number:<strong><a href="">{{ accepted_requests.accepted_driver.vehicle.vehicle_number }}</a></strong></li>
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!--------------------#}
+{#START - Support Agents#}
+{#-------------------->#}
+{#                        <div class="element-wrapper">#}
+{#                            <h6 class="element-header">Accepted Requests</h6>#}
+{#                            <div class="element-box-tp">#}
+{#                                {% if accepted_requests.accepted_driver is not None %}#}
+{#                                <div class="profile-tile">#}
+{#                                    <a class="profile-tile-box" href="">#}
+{#                                        <div class="pt-avatar-w"><img alt="" src="{% static 'dashboard/img/user.png' %}"></div>#}
+{#                                        <div class="pt-user-name"></div>#}
+{#                                    </a>#}
+{#                                    <div class="profile-tile-meta">#}
+{#                                        <ul>#}
+{#                                            <li>Driver Name:<strong>{{ accepted_requests.accepted_driver.name }}</strong></li>#}
+{#                                            <li>Car Number:<strong><a href="">{{ accepted_requests.accepted_driver.vehicle.vehicle_number }}</a></strong></li>#}
 {#                                            <li>Response Time:<strong>2 hours</strong></li>#}
-                                        </ul>
-                                        <div class="pt-btn"><a onclick="payWithRave()" class="btn btn-success btn-sm">Initiate Payment</a></div>
-                                    </div>
-                                </div>
-                                {% endif %}
-
-
-                            </div>
-                        </div>
-                        <!--------------------
-END - Support Agents
--------------------->
-                        <!--------------------
-START - Recent Activity
--------------------->
-                        <div class="element-wrapper">
-                            <h6 class="element-header">Recent Disludge Activity</h6>
-                            <div class="element-box-tp">
-                                {% for dislodged_date in dislodged_dates %}
-                                <div class="activity-boxes-w">
-                                    <div class="activity-box-w">
-                                        <div class="activity-time">o</div>
-                                        <div class="activity-box">
-                                            <div class="activity-avatar"><img alt="" src="img/avatar1.jpg"></div>
-                                            <div class="activity-info">
-                                                <div class="activity-role">{{ dislodged_date.driver.name }}</div><strong class="activity-title">{{ dislodged_date.date }}</strong></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                {% endfor %}
-
-
-                            </div>
-                        </div>
-                        <!--------------------
-END - Recent Activity
--------------------->
-                        <!--------------------
-START - Team Members
--------------------->
+{#                                        </ul>#}
+{#                                        <div class="pt-btn"><a onclick="payWithRave()" class="btn btn-success btn-sm">Initiate Payment</a></div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                {% endif %}#}
+{##}
+{##}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!--------------------#}
+{#END - Support Agents#}
+{#-------------------->#}
+{#                        <!--------------------#}
+{#START - Recent Activity#}
+{#-------------------->#}
+{#                        <div class="element-wrapper">#}
+{#                            <h6 class="element-header">Recent Disludge Activity</h6>#}
+{#                            <div class="element-box-tp">#}
+{#                                <div class="activity-boxes-w">#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">10 Min</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar1.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">John Mayers</div><strong class="activity-title">Opened New Account</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">2 Hours</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar2.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">Ben Gossman</div><strong class="activity-title">Posted Comment</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">5 Hours</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar3.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">Phil Nokorin</div><strong class="activity-title">Opened New Account</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="activity-box-w">#}
+{#                                        <div class="activity-time">2 Days</div>#}
+{#                                        <div class="activity-box">#}
+{#                                            <div class="activity-avatar"><img alt="" src="img/avatar4.jpg"></div>#}
+{#                                            <div class="activity-info">#}
+{#                                                <div class="activity-role">Jenny Miksa</div><strong class="activity-title">Uploaded Image</strong></div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!--------------------#}
+{#END - Recent Activity#}
+{#-------------------->#}
+{#                        <!--------------------#}
+{#START - Team Members#}
+{#-------------------->#}
 {#                        <div class="element-wrapper">#}
 {#                            <h6 class="element-header">Team Members</h6>#}
 {#                            <div class="element-box-tp">#}
@@ -1485,15 +1479,16 @@ START - Team Members
 {#                                </div>#}
 {#                            </div>#}
 {#                        </div>#}
-                        <!--------------------
-END - Team Members
--------------------->
-                    </div>
+{#                        <!--------------------#}
+{#END - Team Members#}
+{#-------------------->#}
+{#                    </div>#}
                     <!--------------------
 END - Sidebar
 -------------------->
                 </div>
             </div>
+            <br><br><br><br><br><br><br><br><br><br><br>
         </div>
     <div aria-hidden="true" class="onboarding-modal modal fade animated" id="atm_request_book_modal" role="dialog" tabindex="-1">
                                         <div class="modal-dialog modal-centered" role="document">
@@ -1503,7 +1498,7 @@ END - Sidebar
 
                                                  <div class="onboarding-slider-w">
                         <div class="onboarding-slide">
-                            <div class="onboarding-media"><img  alt="" src="{% static 'dashboard/img/drainage.png' %}"  width="200px"></div>
+                            <div class="onboarding-media"><img  alt="" src="{% static 'dashboard/img/truck.png' %}"  width="200px"></div>
                             <div class="onboarding-content with-gradient">
                                 <h4 class="onboarding-title">Dislodge Request</h4>
                                 <div class="onboarding-text">Please follow the instructions in the form to request </div>
@@ -1513,7 +1508,7 @@ END - Sidebar
 
 
                              <div class="onboarding-slide">
-                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/drainage.png' %}" width="200px"></div>
+                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>
                             <div class="onboarding-content with-gradient">
                                 <h4 class="onboarding-title">Request Sheet</h4>
                                 <div id="tank_dimensions_text" class="onboarding-text"></div>
@@ -1545,137 +1540,6 @@ END - Sidebar
                                             <div class="form-group">
                                                 <label for="">Cost of Transaction</label>
                                                 <input readonly id="cost_of_transaction" class="form-control" placeholder="Cost of Transaction" type="text" value="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                <div class="row">
-                                        <br>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <button  id="submit_button" class="btn btn-primary" type="submit"> Submit</button>
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-{#                                                <label for="">Last Dislodge Date</label>#}
-{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
-{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    </form>
-
-
-{#                                <div class="row">#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Fully Responsive design</li>#}
-{#                                            <li>Pre-built app layouts</li>#}
-{#                                            <li>Incredible Flexibility</li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                    <div class="col-sm-6">#}
-{#                                        <ul class="features-list">#}
-{#                                            <li>Boxed & Full Layouts</li>#}
-{#                                            <li>Based on Bootstrap 4</li>#}
-{#                                            <li>Developer Friendly </li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                </div>#}
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-{#                                                <div style="margin-top: -15%" class="onboarding-content with-gradient">#}
-{#                                                    <h4 class="onboarding-title">Dislodge Request</h4>#}
-{#                                                    <div class="onboarding-text">Are you sure you tank is full?</div>#}
-{#                                                    <form id="atm_card_request" >#}
-{##}
-{#                                                        <div class="form-group">#}
-{#                                                                <label for="">Select the respective answer</label>#}
-{#                                                                <select id="atm_card_account" required class="form-control">#}
-{#                                                                         <option value="yes">YES</option>#}
-{#                                                                </select>#}
-{#                                                            </div>#}
-{##}
-{##}
-{##}
-{##}
-{##}
-{#                                                     <div class="row">#}
-{##}
-{##}
-{#                                                                 <br>#}
-{#                                                                 </div>#}
-{#                                                                                 <div class="modal-footer">#}
-{#                                                                        <button type="submit" class="btn btn-primary"><i class="os-icon os-icon-send"></i>Submit Form</button>#}
-{#                                                                    </div>#}
-{##}
-{##}
-{##}
-{#                                                             </form>#}
-{#                                                </div>#}
-
-                                            </div>
-                                        </div>
-</div>
-    <div aria-hidden="true" class="onboarding-modal modal fade animated" id="biogas_request_book_modal" role="dialog" tabindex="-1">
-                                        <div class="modal-dialog modal-centered" role="document">
-                                            <div class="modal-content text-center">
-                                                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Abort</span><span class="os-icon os-icon-close"></span></button>
-{#                                                <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>#}
-
-                                                 <div class="onboarding-slider-w">
-                        <div class="onboarding-slide">
-                            <div class="onboarding-media"><img  alt="" src="{% static 'dashboard/img/truck.png' %}"  width="200px"></div>
-                            <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Service Request</h4>
-                                <div class="onboarding-text">Please follow the instructions in the form to request </div>
-                            </div>
-                        </div>
-
-
-
-                             <div class="onboarding-slide">
-                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>
-                            <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Request Sheet</h4>
-                                <div id="tank_dimensions_text" class="onboarding-text"></div>
-                            <form id="request_biogas_form">
-                                    <div class="row">
-
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Comment </label>
-                                                <input id="request_comment" class="form-control" placeholder="Comment" type="text" value="">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Toilet Type</label>
-                                                <select id="type_of_toitet" class="form-control">
-                                                    <option value="Full Flush">Full Flush</option>
-                                                    <option value="Micro Flush">Micro Flush</option>
-                                                    <option value="Large Digester">Large Digester</option>
-                                                    <option value="Standard Digester">Standard Digester</option>
-                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -1801,12 +1665,12 @@ END - Sidebar
     <script src="{% static 'dashboard/js/vue.min.js' %}"></script>
     <script src="{% static 'dashboard/js/datedropper.js' %}"></script>
     <script src="{% static 'js/iziToast.js' %}"></script>
-    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+{#    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>#}
+{#    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>#}
 {#    <script src='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>#}
 <script>
 
-     $('#loader').click(function () {
+        $('#loader').click(function () {
                 console.log("clicked")
                 $(this).removeClass("is-active")
             });
@@ -1822,97 +1686,20 @@ END - Sidebar
                     $('#loader').removeClass("is-active")
                  },500)
             }
-    const API_publicKey = "FLWPUBK-47b6c16fc7013b57dfa97ea8c03fa3e8-X";
-    const card_ref_code = "{{ accepted_requests.id }}";
-    function payWithRave() {
-        {#var invoice_list = [];#}
-       {#var invoice_grand_total = 0;#}
-       {# var card_total_price = $("#final_total").html();#}
-        var x = getpaidSetup({
-            PBFPubKey: "FLWPUBK-60aee28116bf32c8b13f87890590515b-X",
-            customer_email: "{{ accepted_requests.profile.user.email }}",
-            {#amount: 2,#}
-            amount: 1-((1.8/100)*1),
-            {#amount: 1,#}
-            customer_phone: "{{ accepted_requests.profile.phone }}",
-            currency: "GHS",
-            country: "GH",
-            payment_method: "both",
-            txref: card_ref_code,
-            meta: [{
-                metaname: card_ref_code,
-                metavalue: "AP1234",
-            }],
-            onclose: function() {},
-            callback: function(response) {
-                var txref = response.tx.txRef; // collect txRef returned and pass to a 					server page to complete status check.
-                console.log("This is the response returned after a charge", response);
-                if (
-                    response.tx.chargeResponseCode == "00" ||
-                    response.tx.chargeResponseCode == "0"
-                ) {
-                   iziToast.info({
-                    title: 'SaniGH',
-                    message: `Card Charge was successfully`,
-                    position: 'topRight',
-                    transitionIn: 'flipInX',
-                    transitionOut: 'flipOutX',
-                        });
 
-                     iziToast.info({
-                    title: 'SaniGH',
-                    message: `Please wait,finalizing transaction`,
-                    position: 'topRight',
-                    transitionIn: 'flipInX',
-                    transitionOut: 'flipOutX',
-                        })
-                    addloader()
-                    $.ajax({
-                        url: "{% url 'shitty:paid' %}",
-                        method: "post",
-                        data:{
-                            ref_code : card_ref_code,
-                        },
-                        success:function(data){
-                            removeloader()
-                            if (data.message === "success"){
-                                window.location = "{% url 'shitty:receipts' %}";
-                                    }
-
-                        },
-                        error:function(data){
-                            removeloader();
-                             iziToast.warning({
-                            title: 'SaniGH',
-                            message: `Please check your internet connection`,
-                            position: 'topRight',
-                            transitionIn: 'flipInX',
-                            transitionOut: 'flipOutX',
-                                })
-                        }
-                    })
-
-                    // redirect to a success page
-                } else {
-                    iziToast.warning({
-                            title: 'SaniGH',
-                            message: `OOPs!!!.. Failure,Card couldn't be processed`,
-                            position: 'topRight',
-                            transitionIn: 'flipInX',
-                            transitionOut: 'flipOutX',
-                                })
-                    // redirect to a failure page.
-                }
-
-                x.close(); // use this to close the modal immediately after payment.
-            }
-        });
-    }
 </script>
 <script type="text/javascript">
         $(document).ready(function () {
 
 
+            $('.report_one').click(function(){
+                console.log($(this))
+                var button = $(this)
+                var data = button.attr("data-id")
+                console.log("opening.",data)
+                var myWindow = window.open('/show_receipt/' +data +"/", "", "width=550, height=600");
+                myWindow.moveTo(800,200);
+    });
             $('#loader').click(function () {
                 console.log("clicked")
                 $(this).removeClass("is-active")
@@ -1931,81 +1718,14 @@ END - Sidebar
             }
         {#initialize()#}
             $('#id_day').dateDropper();
-        var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-		osmAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">Powered by Leafletjs OpenStreetMap</a> contributors',
-		osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-
-	    var map = L.map('map_canvas').setView([5.55602, -0.1969], 15).addLayer(osm);
-            L.marker([5.55602,-0.1969],{
-            draggable: true,
-            })
-            .addTo(map).on('drag', function (event) {
-            console.log(event.latlng);
-            var lat = event.latlng.lat;
-            var lng = event.latlng.lng;
-            $('#id_gps_location').val(lat+','+lng)
-        }).openPopup();
+            $('#investigations_table').DataTable();
 
         console.log("man's not hot");
 
-        var num_of_house_hold = 0;
-        $("#num_adults").blur(function () {
-            num_of_house_hold+=parseInt($(this).val())
-            $("#household").val(num_of_house_hold)
-        });
-
-        $("#num_children").blur(function () {
-        num_of_house_hold+=parseInt($(this).val())
-        $("#household").val(num_of_house_hold)
-
-        });
-
-        $("#len_con").focus(function () {
-            $("#tank_dimensions_text").html("Measure the longest side of tank in the surface view")
-            $("#image_changer").attr("src","/static/dashboard/img/lenth.png");
-            {#$("#image_changer").attr("src","/static/dashboard/img/output_WAUMfr.gif");#}
-
-        });
-
-        $("#wid_con").focus(function () {
-            $("#tank_dimensions_text").html("Measure the shortest side of the tank in the surface view ")
-            $("#image_changer").attr("src","/static/dashboard/img/width.png");
-
-        });
-
-        $("#eff").focus(function () {
-            $("#tank_dimensions_text").html("Measure from the base of tank to the top of water level")
-            $("#image_changer").attr("src","/static/dashboard/img/output_WAUMfr.gif");
-        });
-
-
-        var volume_of_sludge = 0;
-        $("#eff").blur(function () {
-            var wid_con = parseInt($("#wid_con").val())
-            var len_con = parseInt($("#len_con").val())
-            var effective_depth = parseInt($("#eff").val())
-            var volume = (wid_con * len_con* effective_depth) * 1000
-            $("#sludge_volume").val(volume)
-            {#m3 * 1000#}
-        });
 
 
 
 
-        $("#open_map").click(function () {
-            if (navigator.geolocation) {
-                    var optn = {
-                    enableHighAccuracy : true,
-                    timeout : Infinity,
-                    maximumAge : 0
-                };
-
-             navigator.geolocation.getCurrentPosition(showPosition, showError, optn);
-
-                } else {
-                alert('Geolocation is not supported inx your browser');
-            }
-        });
 
         $('#atm_request_book_modal').on('show.bs.modal', function (event) {
                console.log("opening request assistant modal")
@@ -2079,39 +1799,6 @@ END - Sidebar
                 })
             }
             console.log("submitting the request sheet");
-        });
-
-
-        $("#request_biogas_form").submit(function (event) {
-            event.preventDefault();
-            if (confirm("do you want to submit this request")){
-                addloader()
-                $.ajax({
-                    url: "{% url 'shitty:dashboard' %}",
-                    method: "post",
-                    data:{
-                        type:"biogas_request",
-                        request_comment: $("#request_comment").val(),
-                        type_of_toilet: $("#type_of_toitet").val(),
-
-                    },
-                    success:function(data){
-                        removeloader()
-                         iziToast.warning({
-                            title: 'Request',
-                           position: 'topRight',
-                            message: 'Request has been sent successfully'
-                            });
-                        $("#biogas_request_book_modal").modal("hide");
-                        console.log(data);
-                    },
-                    error:function(data){
-                        removeloader()
-                        console.log(data)
-                    }
-                })
-            }
-            console.log("submitting the request sheet");
         })
 
 
@@ -2119,15 +1806,7 @@ END - Sidebar
             event.preventDefault();
              $('#atm_request_book_modal').modal("show")
                 navigator.vibrate([500]);
-            });
-
-
-        $("#biogester_request").click(function (event) {
-            event.preventDefault();
-             $('#biogas_request_book_modal').modal("show")
-                navigator.vibrate([500]);
-            });
-
+            })
 
          function showError(error) {
                 switch(error.code) {

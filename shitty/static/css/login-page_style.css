@@ -54,6 +54,54 @@ body {
     z-index: 10;
 }
 
+
+
+.loggin-page_container {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+.loggin-section {
+    background-image: url(../Image/noise.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    width: 50%;
+    background-color: #ffffff;
+    position: relative;
+    transition: .5s ease;
+}
+
+.loggin-section:hover {
+    width: 60%;
+}
+
+.loggin-section:before {
+    background-image: url(../Image/noise.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    z-index: 5;
+    right: 20px;
+    border-radius: 0%;
+    transition: .3s ease;
+}
+
+.loggin-section:hover:before {
+    width: 40px;
+    right: -20px;
+    border-radius: 40%;
+    z-index: 10;
+}
+
+
 .signup-section {
     background-image: url(../Image/noise.png);
     background-repeat: repeat;
@@ -114,6 +162,10 @@ body {
     color: #2b2e2f;
 }
 
+
+.loggin-section .section-page-intro_title {
+    color: #2b2e2f;
+}
 .page-side.section-open {
     width: 100%;
 }
@@ -197,7 +249,7 @@ body {
     transition: .3s ease;
     cursor: text;
     font-weight: 600;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 .login-page_input:focus + .login-page_placeholder {

@@ -2,6 +2,7 @@
 
 @media (max-width:767px) {
     .login-section:before {content: none;}
+    .loggin-section:before {content: none;}
     .signup-section:before {content: none;}
     .page-side.section-close {width: 80px;}
     .page-side.section-open {width: 100%;}

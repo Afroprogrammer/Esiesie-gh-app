@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{% static 'css/login-page_responsive.css' %}">
     <link rel="stylesheet" href="{% static 'css/loader.css' %}">
     <link rel="stylesheet" href="{% static 'css/iziToast.css' %}">
-
 </head>
 
 <body>
@@ -35,11 +34,11 @@
                 <div class="section-form">
                     <form class="login-form">
                         <label class="login-page_label">
-                            <input id="login_username" class="login-page_input" type="text" name="email" autocomplete="off">
-                            <span class="login-page_placeholder">UserName</span>
+                            <input required id="login_username" class="login-page_input" type="text" name="email" autocomplete="off">
+                            <span class="login-page_placeholder">Email</span>
                         </label>
                         <label class="login-page_label">
-                            <input id="login_password" class="login-page_input" type="password" name="password">
+                            <input required id="login_password" class="login-page_input" type="password" name="password">
                             <span class="login-page_placeholder">Password</span>
                         </label>
                         <div class="login-section_submit">
@@ -85,28 +84,29 @@
                 <div class="section-form">
                     <form class="signup-form">
                        <label class="login-page_label">
-                            <input id="username_reg" class="login-page_input" type="text" name="username" autocomplete="off">
+                            <input id="username_reg" required class="login-page_input" type="text" name="username" autocomplete="off">
                             <span class="login-page_placeholder">Username</span>
-                        </label>
-                        <label class="login-page_label">
-                            <input id="full_name" class="login-page_input" type="text" name="email" autocomplete="off">
-                            <span class="login-page_placeholder">Full Name</span>
-                        </label>
-                        <label class="login-page_label">
-                            <input id="ghana_post_address" class="login-page_input" type="text" name="email" autocomplete="off">
-                            <span class="login-page_placeholder">GhanaPost Address</span>
-                        </label>
-                        <label class="login-page_label">
-                            <input id="phone_num" class="login-page_input" type="text" name="email" autocomplete="off">
-                            <span class="login-page_placeholder">Phone Number</span>
                         </label>
 
                         <label class="login-page_label">
-                            <input id="password1" class="login-page_input" type="password" name="password">
+                            <input id="fullname" required class="login-page_input" type="text" name="fullname" autocomplete="off">
+                            <span class="login-page_placeholder">Full Name</span>
+                        </label>
+                        <label class="login-page_label">
+                            <input id="email_ad" required class="login-page_input" type="email" name="email" autocomplete="off">
+                            <span class="login-page_placeholder">Email</span>
+                        </label>
+
+                        <label class="login-page_label">
+                            <input id="phone_num" required class="login-page_input" type="tel" name="phone" autocomplete="off">
+                            <span class="login-page_placeholder">Phone</span>
+                        </label>
+                        <label class="login-page_label">
+                            <input id="password1" required class="login-page_input" type="password" name="password">
                             <span class="login-page_placeholder">Password</span>
                         </label>
                         <label class="login-page_label">
-                            <input id="password2" class="login-page_input" type="password" name="confirm password">
+                            <input id="password2" required class="login-page_input" type="password" name="confirm password">
                             <span class="login-page_placeholder">Confirm Password</span>
                         </label>
                         <div class="signup-section_submit">
@@ -152,18 +152,18 @@
 
 
         $(".signup-form").submit(function(event){
-            event.preventDefault();
-            addloader()
-            var pass1 = $("#password1").val()
-            var pass2 = $("#password2").val()
+        event.preventDefault();
+        addloader()
+        var pass1 = $("#password1").val()
+        var pass2 = $("#password2").val()
             if (pass1 === pass2) {
                  $.ajax({
-                url: "{% url 'shitty:driver_second' %}",
+                url: "{% url 'shitty:biogas' %}",
                 method: "post",
                 data:{
                     type: "register",
-                    name: $("#full_name").val(),
-                    ghana_post_address: $("#ghana_post_address").val(),
+                    name: $("#fullname").val(),
+                    email: $("#email_ad").val(),
                     username: $("#username_reg").val(),
                     phone: $("#phone_num").val(),
                     pass1: pass1,
@@ -173,7 +173,7 @@
                     console.log(data);
                     if (data.message === "success"){
                              iziToast.info({
-                                title: 'SaniGH',
+                                title: 'Agripool',
                                 message: `Thanks for registering`,
                                 position: 'topRight',
                                 transitionIn: 'flipInX',
@@ -181,7 +181,7 @@
                                 }
                                 );
                              setTimeout(function () {
-                            window.location = "{% url 'shitty:driver_dashboard' %}"
+                            window.location = "{% url 'shitty:dashboard' %}"
                              },2000)
 
                     }
@@ -220,11 +220,11 @@
 
     });
 
-      $(".login-form").submit(function(event){
+          $(".login-form").submit(function(event){
         event.preventDefault();
         addloader()
          $.ajax({
-            url: "{% url 'shitty:driver_second' %}",
+            url: "{% url 'shitty:biogas' %}",
             method: "post",
             data:{
                 type: "login",
@@ -235,7 +235,7 @@
                 console.log(data);
                 removeloader()
                 if (data.message === "success"){
-                    window.location = "{% url 'shitty:driver_dashboard' %}"
+                    window.location = "{% url 'shitty:biogas' %}"
                 }
                 else {
                      iziToast.warning({
@@ -258,6 +258,41 @@
 
 
     </script>
+<script type="text/javascript">
+
+
+
+
+       function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+</script>
+
 
 </body>
 

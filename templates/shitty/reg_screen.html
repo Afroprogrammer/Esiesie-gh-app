@@ -23,7 +23,7 @@
 
         <div class="login-section page-side section-ope">
             <div class="section-page_intro">
-                <img width="100px" src="{% static 'dashboard/img/truck.png' %}" alt="signin-icon">
+                <img height="" width="100px" src="{% static 'dashboard/img/drainage.png' %}" alt="signin-icon">
                 <p class="section-page-intro_title">Driver</p>
             </div>
 
@@ -69,8 +69,6 @@
             </div>
         </div>
 
-        <!--       Sign up Side      -->
-
         <div class="signup-section page-side section-clos">
             <div class="section-page_intro">
                 <img width="100px" src="{% static 'dashboard/img/girl.png' %}" alt="signup-icon">
@@ -98,16 +96,64 @@
                             <span class="login-page_placeholder">Confirm Password</span>
                         </label>
                         <div class="signup-section_submit">
+{#                            <ul>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-google fa-fw"></i></a></li>#}
+{#                            </ul>#}
+                            <div class="login-page-submit-btn">
+                                <input type="submit" name="submit-signup" value="submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="loggin-section page-side section-ope">
+            <div class="section-page_intro">
+                <img width="100px" src="{% static 'dashboard/img/eco-energy.png' %}" alt="signin-icon">
+                <p class="section-page-intro_title">BioGester Servicing</p>
+            </div>
+
+            <div class="login-form-area">
+                <p class="form-title">Sign In</p>
+                <div class="section-form">
+                    <form class="login-form">
+                        <label class="login-page_label">
+                            <input class="login-page_input" type="email" name="email" autocomplete="off">
+                            <span class="login-page_placeholder">Email</span>
+                        </label>
+                        <label class="login-page_label">
+                            <input class="login-page_input" type="password" name="password">
+                            <span class="login-page_placeholder">Password</span>
+                        </label>
+                        <div class="login-section_submit">
                             <ul>
                                 <li><a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
                                 <li><a href="#" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
                                 <li><a href="#" target="_blank"><i class="fa fa-google fa-fw"></i></a></li>
                             </ul>
                             <div class="login-page-submit-btn">
-                                <input type="submit" name="submit-signup" value="submit">
+                                <input type="submit" name="submit-login" value="submit">
                             </div>
                         </div>
+                        <div class="login-page_forget">
+                            <a href="#">Forget Your Password ?</a>
+                        </div>
                     </form>
+
+                    <form class="forget-form">
+                        <p class="forget-title">Forget Your Password</p>
+                        <label class="login-page_label">
+                            <input class="login-page_input" type="email" name="email" autocomplete="off">
+                            <span class="login-page_placeholder">Email</span>
+                        </label>
+                        <div class="login-section_submit">
+                            <div class="login-page-submit-btn"><input type="submit" name="submit-login" value="submit"></div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>

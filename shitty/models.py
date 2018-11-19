@@ -28,9 +28,11 @@ class DislodgeDates(models.Model):
     date = models.DateField(blank=True,null=True)
     driver = models.ForeignKey('Driver',on_delete=models.DO_NOTHING,blank=True,null=True)
     done = models.BooleanField(default=False)
+    requested_user = models.ForeignKey('Profile',on_delete=models.DO_NOTHING,blank=True,null=True)
 
     def __str__(self):
         return str(self.date.isoformat())
+
 
 class TippingPoints(models.Model):
     name = models.CharField(max_length=100,blank=True,null=True)
@@ -38,6 +40,7 @@ class TippingPoints(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Profile(models.Model):
     user = models.ForeignKey(User,on_delete=models.DO_NOTHING,blank=True,null=True)
@@ -71,6 +74,18 @@ class License(models.Model):
         return self.type
 
 
+class BioTypes(models.Model):
+    name = models.CharField(max_length=100,blank=True,null=True)
+    def __str__(self):
+        return self.name
+
+    # full_flash
+    # micro flush
+    #large disgester
+    # standard digester
+
+
+    # problem commm toilet tpye gps_coordinates
 class Vehicle(models.Model):
     vehicle_number = models.CharField(max_length=100,blank=True,null=True)
     capacity = models.FloatField(blank=True,null=True)
@@ -96,7 +111,9 @@ class Driver(models.Model):
     lat = models.CharField(max_length=100,blank=True,null=True)
     lng = models.CharField(max_length=100,blank=True,null=True)
     bpo = models.FileField(upload_to="bpo/",blank=True,null=True)
+    license = models.FileField(upload_to="bpo/",blank=True,null=True)
     vehicle = models.OneToOneField(Vehicle,blank=True,null=True,on_delete=models.DO_NOTHING)
+    first_time = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
@@ -106,6 +123,24 @@ class Request(models.Model):
     profile = models.ForeignKey(Profile,on_delete=models.DO_NOTHING,blank=True,null=True)
     total_cost = models.FloatField(blank=True,null=True)
     volume_cost = models.FloatField(blank=True,null=True)
+    accepted_driver = models.ForeignKey(Driver,on_delete=models.DO_NOTHING,blank=True,null=True)
+    disludged = models.BooleanField(default=False)
+    distance = models.CharField(max_length=100,blank=True,null=True)
+    paid = models.BooleanField(default=False)
 
     def __str__(self):
         return self.profile.name
+
+
+class BioRequest(models.Model):
+    comment = models.CharField(max_length=100,blank=True,null=True)
+    type_of_toilet = models.CharField(max_length=100,blank=True,null=True)
+    user = models.ForeignKey(Profile,on_delete=models.DO_NOTHING,blank=True,null=True)
+    accepted_driver = models.ForeignKey(Driver,on_delete=models.DO_NOTHING,blank=True,null=True)
+    paid = models.BooleanField(default=False)
+    date = models.DateField(blank=True,null=True)
+
+    def __str__(self):
+        return self.comment
+
+
