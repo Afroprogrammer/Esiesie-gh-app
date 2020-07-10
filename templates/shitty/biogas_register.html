@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login page</title>
+    <title>BioGas Login Page</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet'>
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
@@ -173,7 +173,7 @@
                     console.log(data);
                     if (data.message === "success"){
                              iziToast.info({
-                                title: 'Agripool',
+                                title: 'ESIESIEGH',
                                 message: `Thanks for registering`,
                                 position: 'topRight',
                                 transitionIn: 'flipInX',
@@ -181,7 +181,7 @@
                                 }
                                 );
                              setTimeout(function () {
-                            window.location = "{% url 'shitty:dashboard' %}"
+                            window.location = "{% url 'shitty:bio_dashboard' %}"
                              },2000)
 
                     }
@@ -235,11 +235,11 @@
                 console.log(data);
                 removeloader()
                 if (data.message === "success"){
-                    window.location = "{% url 'shitty:biogas' %}"
+                    window.location = "{% url 'shitty:bio_dashboard' %}"
                 }
                 else {
                      iziToast.warning({
-                            title: 'SaniGH',
+                            title: 'ESIESIEGH',
                             message: `Wrong Credentials provided`,
                             position: 'topRight',
                             transitionIn: 'flipInX',

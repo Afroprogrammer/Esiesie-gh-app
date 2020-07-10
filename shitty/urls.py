@@ -33,4 +33,5 @@ urlpatterns = [
     path('driver_tipping/<int:id>/',driver_tipping,name="driver_tipping"),
     path('biogas/',biogas,name="biogas"),
     path('bio_dashboard/',bio_dashboard,name="bio_dashboard"),
+    path('code_of_conduct/',code_of_conduct,name="code_of_conduct"),
 ]

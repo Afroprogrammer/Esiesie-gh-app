@@ -157,6 +157,7 @@ def user_second(request):
                 user.set_password(password)
                 user.save()
                 profile.user = user
+                profile.first_time = True
                 profile.save()
                 user = authenticate(request, username=request.POST.get("username"), password=password)
                 login(request, user)
@@ -225,6 +226,23 @@ from geopy.distance import geodesic
 @csrf_exempt
 def dashboard(request):
     if request.method == "POST":
+
+        if request.POST.get("type") == "eval_form":
+            print("eval form is in ")
+            EvalForm.objects.create(
+                eval1=request.POST.get("eval_1"),
+                eval2=request.POST.get("eval_2"),
+                eval3=request.POST.get("eval_3"),
+                eval4=request.POST.get("eval_4"),
+                comment=request.POST.get("comments"),
+                user = User.objects.get(username=request.user),
+            )
+            print("saved eval form with success")
+            data = {
+                "message": "success"
+            }
+
+            return JsonResponse(data)
         if request.POST.get("type") == "request_dislodge":
             print("this is a dislodge request")
             unit_rate = 70.00
@@ -282,7 +300,18 @@ def dashboard(request):
             }
             return JsonResponse(data)
 
+        if request.POST.get("type") == "build_toilet":
+            BuildToilet.objects.create(
+                type= request.POST.get("toilet_type"),
+                requested_user=Profile.objects.get(user=request.user),
+                date = today
+            )
+            print("saved a new build request")
+            data = {
+                "message": "success"
+            }
 
+            return JsonResponse(data)
 
         date = None
         if len(str(request.POST.get("last_date"))) > 2:
@@ -319,16 +348,18 @@ def dashboard(request):
         accepted_requests = accepted_requests[0]
     else:
         accepted_requests = None
-    print(accepted_requests)
+    # print(accepted_requests)
     dislodged_dates = DislodgeDates.objects.filter(requested_user=user)
-    print(dislodged_dates)
+    bio_request = BioRequest.objects.filter(user=user,paid=False)
+    print(bio_request)
     context = {
         'user': user,
         "tt":tt,
         "ct":ct,
         "municipals":municipals,
         "dislodged_dates":dislodged_dates,
-        "accepted_requests":accepted_requests
+        "accepted_requests":accepted_requests,
+        "bio_request":bio_request,
     }
     return render(request, "shitty/dashboard.html",context)
 
@@ -466,6 +497,7 @@ def paid(request):
 
 def receipts(request):
     requests = Request.objects.filter(profile=Profile.objects.get(user=request.user),paid=True)
+
     print(requests)
     context = {
         "requests":requests
@@ -624,24 +656,26 @@ def biogas(request):
     }
     return render(request, "shitty/biogas_register.html",context)
 
-
+@csrf_exempt
 def bio_dashboard(request):
     driver = Driver.objects.get(user=request.user)
-    requests = Request.objects.filter(disludged=False)
+    requests = BioRequest.objects.filter(issue_fixed=False)
     if request.method == "POST":
 
         if request.POST.get("type") == "accept_request":
             print("accepting request")
             # print(request.POST.get("id"))
-            service_request = Request.objects.get(id=int(request.POST.get("id")))
+            service_request = BioRequest.objects.get(id=int(request.POST.get("id")))
             service_request.accepted_driver = Driver.objects.get(user=request.user)
+            service_request.price_charges = request.POST.get("charge")
             service_request.save()
-            tip_off = service_request.profile.municipality.tipping_point.lat_lng.split(",")
-            house_location = ast.literal_eval(service_request.profile.gps_coord)
+
+            # tip_off = service_request.profile.municipality.tipping_point.lat_lng.split(",")
+            house_location = ast.literal_eval(service_request.user.gps_coord)
 
             request.session['house_location1'] = float(house_location[0])
             request.session['house_location2'] = float(house_location[1])
-            request.session['tip_off'] = tip_off
+            # request.session['tip_off'] = tip_off
             print(request.session['house_location1'],"house location 1")
             print(request.session['house_location2'],"house location 2")
             data = {
@@ -673,3 +707,10 @@ def bio_dashboard(request):
         "driver":driver
     }
     return render(request, "shitty/biogas_dashboard.html",context)
+
+
+def code_of_conduct(request):
+    context = {
+
+    }
+    return render(request, "shitty/code.html",context)

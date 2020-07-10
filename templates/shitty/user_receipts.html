@@ -46,7 +46,7 @@
                         <div class="onboarding-slide">
                             <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/bigicon2.png' %}" width="200px"></div>
                             <div class="onboarding-content with-gradient">
-                                <h4 class="onboarding-title">Welcome to SaniGH!</h4>
+                                <h4 class="onboarding-title">Welcome to EsiesieGH!</h4>
                                 <div class="onboarding-text">We hope to make your de-sludging blah blah blah.</div>
                             </div>
                         </div>
@@ -402,7 +402,7 @@ START - Mobile Menu
 -------------------->
             <div class="menu-mobile menu-activated-on-click color-scheme-dark">
                 <div class="mm-logo-buttons-w">
-                    <a class="mm-logo" href="index.html"><img src="{% static 'dashboard/img/SANI.png' %}"><span>SaniGH</span></a>
+                    <a class="mm-logo" href="index.html"><img src="{% static 'dashboard/img/SANI.png' %}"><span>EsiesieGH</span></a>
                     <div class="mm-buttons">
 {#                        <div class="content-panel-open">#}
 {#                            <div class="os-icon os-icon-grid-circles"></div>#}
@@ -606,7 +606,7 @@ START - Main Menu
                 <div class="logo-w">
                     <a class="logo" href="index.html">
                         <div class="logo-element"></div>
-                        <div class="logo-label">SaniGH</div>
+                        <div class="logo-label">EsiesieGH</div>
                     </a>
                 </div>
 {#                <div class="logged-user-w avatar-inline">#}
@@ -764,8 +764,8 @@ END - Messages Link in secondary top menu
                             <div class="sub-menu-icon"><i class="os-icon os-icon-layout"></i></div>
                             <div class="sub-menu-i">
                                 <ul class="sub-menu">
-                                    <li><a href="{% url 'shitty:dashboard' %}">Dashboard 1</a></li>
-                                    <li><a href="{% url 'shitty:receipts' %}">Receipts</a></li>
+                                    <li><a href="{% url 'shitty:dashboard' %}">Dashboard</a></li>
+                                    <li><a href="{% url 'shitty:receipts' %}">Receipts and Requests</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1140,7 +1140,7 @@ END - Breadcrumbs
                         </div>
 
                         <div class="row">
-                            <div class="col-md-10 col-xxxl-12">
+                            <div class="col-md-11 col-xxxl-12">
                                 <div class="element-wrapper">
                                     <h6 class="element-header">Requests</h6>
                                     <div class="element-box">
@@ -1164,7 +1164,10 @@ END - Breadcrumbs
                                             <td>{{ foo.total_cost }}</td>
                                             <td>{{ foo.volume_cost }}</td>
                                             <td>{{ foo }}</td>
-                                            <td><a data-id="{{ foo.id }}"  class="btn btn-warning report_one"  id="">View Request </a></td>
+                                            <td>
+                                                <a data-id="{{ foo.id }}"  class="btn btn-warning report_one"  id="">View Request </a>
+                                                <a data-id="{{ foo.id }}"  class="btn btn-warning evaluation_sheet"  id="">Evaluation Sheet </a>
+                                            </td>
                                             </tr>
                                         {% endfor %}
                                             {% endif %}
@@ -1628,6 +1631,153 @@ END - Sidebar
                                             </div>
                                         </div>
 </div>
+    <div aria-hidden="true" class="onboarding-modal modal fade animated" id="evalutation_modal" role="dialog" tabindex="-1">
+                                        <div class="modal-dialog modal-centered" role="document">
+                                            <div class="modal-content text-center">
+                                                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Abort</span><span class="os-icon os-icon-close"></span></button>
+{#                                                <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>#}
+
+                                                 <div class="onboarding-slider-w">
+                        <div class="onboarding-slide">
+                            <div class="onboarding-media"><img  alt="" src="{% static 'dashboard/img/truck.png' %}"  width="200px"></div>
+                            <div class="onboarding-content with-gradient">
+                                <h4 class="onboarding-title">Evaluation Form</h4>
+                                <div class="onboarding-text">Please follow the instructions in the form to request </div>
+                            </div>
+                        </div>
+
+
+
+                             <div class="onboarding-slide">
+                            <div class="onboarding-media"><img alt="" src="{% static 'dashboard/img/truck.png' %}" width="200px"></div>
+                            <div class="onboarding-content with-gradient">
+                                <h4 class="onboarding-title">Evaluation Form</h4>
+                                <div id="tank_dimensions_text" class="onboarding-text"></div>
+                            <form id="evaluation_form">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">1. How was the Service Provider’s conduct with your occupant ?</label>
+                                                <input  id="eval_1" class="form-control" placeholder="" type="text" value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">2. Did he conduct operations with the basic PPEs (Personal Protective Equipments)</label>
+                                                <input  id="eval_2" class="form-control" placeholder="" type="text" value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">3. What was the hygiene state of the Truck upon arrival to provide the Service?</label>
+                                                <input  id="eval_3" class="form-control" placeholder="" type="text" value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">4.Service Provider’s adherence to the App generated Service Charge.</label>
+                                                <input  id="eval_4" class="form-control" placeholder="" type="text" value="">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="">5. Comment</label>
+                                                <input  id="eval_5" class="form-control" placeholder="" type="text" value="">
+{#                                                <input  id="cost_of_transaction" class="form-control" placeholder="Cost of Transaction" type="text" value="">#}
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                <div class="row">
+                                        <br>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+{#                                                <label for="">Last Dislodge Date</label>#}
+{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
+{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <button  id="submit_button" class="btn btn-primary" type="submit"> Submit</button>
+{#                                                <label for="">Last Dislodge Date</label>#}
+{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
+{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+{#                                                <label for="">Last Dislodge Date</label>#}
+{#                                                <div class="pt-btn"><a class="btn btn-success btn-sm" href="apps_full_chat.html">Send Message</a></div>#}
+{#                                                <input class="form-control" placeholder="Number of Children" type="date" value="">#}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </form>
+
+
+{#                                <div class="row">#}
+{#                                    <div class="col-sm-6">#}
+{#                                        <ul class="features-list">#}
+{#                                            <li>Fully Responsive design</li>#}
+{#                                            <li>Pre-built app layouts</li>#}
+{#                                            <li>Incredible Flexibility</li>#}
+{#                                        </ul>#}
+{#                                    </div>#}
+{#                                    <div class="col-sm-6">#}
+{#                                        <ul class="features-list">#}
+{#                                            <li>Boxed & Full Layouts</li>#}
+{#                                            <li>Based on Bootstrap 4</li>#}
+{#                                            <li>Developer Friendly </li>#}
+{#                                        </ul>#}
+{#                                    </div>#}
+{#                                </div>#}
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+{#                                                <div style="margin-top: -15%" class="onboarding-content with-gradient">#}
+{#                                                    <h4 class="onboarding-title">Dislodge Request</h4>#}
+{#                                                    <div class="onboarding-text">Are you sure you tank is full?</div>#}
+{#                                                    <form id="atm_card_request" >#}
+{##}
+{#                                                        <div class="form-group">#}
+{#                                                                <label for="">Select the respective answer</label>#}
+{#                                                                <select id="atm_card_account" required class="form-control">#}
+{#                                                                         <option value="yes">YES</option>#}
+{#                                                                </select>#}
+{#                                                            </div>#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#                                                     <div class="row">#}
+{##}
+{##}
+{#                                                                 <br>#}
+{#                                                                 </div>#}
+{#                                                                                 <div class="modal-footer">#}
+{#                                                                        <button type="submit" class="btn btn-primary"><i class="os-icon os-icon-send"></i>Submit Form</button>#}
+{#                                                                    </div>#}
+{##}
+{##}
+{##}
+{#                                                             </form>#}
+{#                                                </div>#}
+
+                                            </div>
+                                        </div>
+</div>
 
         <div class="display-type"></div>
     </div>
@@ -1691,6 +1841,15 @@ END - Sidebar
 <script type="text/javascript">
         $(document).ready(function () {
 
+                var id = ''
+            $(".evaluation_sheet").click(function (event) {
+                event.preventDefault();
+                var evaluation_id = $(this).attr("data-id")
+                id = evaluation_id
+                {#console.log(evaluation_id,"eval id");#}
+                $('#evalutation_modal').modal("show")
+                {#navigator.vibrate([500]);#}
+            });
 
             $('.report_one').click(function(){
                 console.log($(this))
@@ -1770,6 +1929,42 @@ END - Sidebar
 
     });
 
+
+        $("#evaluation_form").submit(function (event) {
+                    event.preventDefault();
+            if (confirm("do you want to submit this form?")) {
+                    addloader()
+                    $.ajax({
+                        url: "{% url 'shitty:dashboard' %}",
+                        method: "post",
+                        data:{
+                            type: "eval_form",
+                            eval_1: $("#eval_1").val(),
+                            eval_2: $("#eval_2").val(),
+                            eval_3: $("#eval_3").val(),
+                            eval_4: $("#eval_4").val(),
+                            comments: $("#eval_5").val(),
+
+                            {#driver: #}
+                        },
+                        success:function(data){
+                            removeloader()
+                            iziToast.info({
+                            title: 'Request',
+                            position: 'topRight',
+                            message: 'Thanks for evaluating this service'
+                            });
+                        $("#evalutation_modal").modal("hide");
+                                {#removeloader()#}
+                            {#console.log(data);#}
+                        },
+                        error:function(data){
+                                removeloader()
+                        }
+                    })
+
+            }
+        });
         $("#request_invoice_form").submit(function (event) {
             event.preventDefault();
             if (confirm("do you want to submit this request")){
@@ -1806,7 +2001,7 @@ END - Sidebar
             event.preventDefault();
              $('#atm_request_book_modal').modal("show")
                 navigator.vibrate([500]);
-            })
+        });
 
          function showError(error) {
                 switch(error.code) {

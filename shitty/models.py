@@ -139,8 +139,34 @@ class BioRequest(models.Model):
     accepted_driver = models.ForeignKey(Driver,on_delete=models.DO_NOTHING,blank=True,null=True)
     paid = models.BooleanField(default=False)
     date = models.DateField(blank=True,null=True)
+    issue_fixed = models.BooleanField(default=False)
+    price_charges = models.FloatField(blank=True,null=True)
 
     def __str__(self):
         return self.comment
 
 
+class BuildToilet(models.Model):
+    type = models.CharField(max_length=100,blank=True,null=True)
+    requested_user = models.ForeignKey(Profile,on_delete=models.DO_NOTHING,blank=True,null=True)
+    accepted_driver = models.ForeignKey(Driver,on_delete=models.DO_NOTHING,blank=True,null=True)
+    done = models.BooleanField(default=False)
+    paid = models.BooleanField(default=False)
+    date = models.DateField(blank=True,null=True)
+
+    def __str__(self):
+        return self.type
+
+
+class EvalForm(models.Model):
+    eval1 = models.CharField(max_length=100,blank=True,null=True)
+    eval2 = models.CharField(max_length=100,blank=True,null=True)
+    eval3 = models.CharField(max_length=100,blank=True,null=True)
+    eval4 = models.CharField(max_length=100,blank=True,null=True)
+    comment = models.CharField(max_length=100,blank=True,null=True)
+    user = models.ForeignKey(User,on_delete=models.DO_NOTHING,blank=True,null=True)
+    # driver = models.ForeignKey(Driver,on_delete=models.DO_NOTHING,blank=True,null=True)
+
+
+    def __str__(self):
+        return self.eval1

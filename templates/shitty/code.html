@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login page</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-page_demo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-page_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-page_responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loader.css' %}">
+    <link rel="stylesheet" href="{% static 'css/iziToast.css' %}">
+
+</head>
+
+<body>
+
+    <div class="login-page_container">
+
+        <!--       Sign in Side      -->
+ <div id="loader"></div>
+        <div class="login-section page-side section-ope">
+            <div class="section-page_intro">
+                <img src="{% static 'Image/signin-icon-black.png' %}" alt="signin-icon">
+                <p class="section-page-intro_title">Health and Safety Policy</p>
+            </div>
+
+            <div class="login-form-area">
+                <p class="form-title">Health and Safety Policy</p>
+                <div class="section-form">
+                    <form class="login-form">
+{#                        <label class="login-page_label">#}
+{#                            <input id="login_username" class="login-page_input" type="text" name="email" autocomplete="off">#}
+{#                            <span class="login-page_placeholder">UserName</span>#}
+{#                        </label>#}
+                        <label style="color: black" for="">
+                            <p> HEALTH AND SAFETY MANAGEMENT POLICY  </p>
+                            <p>Esiesie-GH</p>
+<p>This Health and Safety Management Plan has been developed to outline our approach to managing health and safety, which are of paramount importance to Sani-GH, during operations in the provision of de-sludging services.
+We will:
+make this plan available to Liquide Waste Service Providers who subscribe to our Service. All our subscribers will make all their workers have the opportunity to read and understand this policy
+provide periodic education and update of its content to all Service Providers workers to ensure strict adherence to the document details.
+review the policy regularly to incorporate current trends of relevance to de-sludging services.
+</p>
+
+<p>
+Major Health and Safety Challenges Anticipated during Operations
+(i)Public Exposure to Deep Pits
+Opened Sceptic Tanks poses high-level hazard to household, Service Providers as well as animals on premises.
+(ii)Exposure to Sharp Objects and Heavy Machinery
+Assessment tool tools and equipment if not managed effectively can increase the risk of accident on site.
+(iii) Premises accidents and near misses
+Every work package has its potential accidents. All works are to be carried out with caution. Site Code of Conduct and Safety procedures are to be adhered to strictly and eventual breaches addressed.
+(iv)Spillage and Leakages
+</p>
+
+<p>
+These are common phenomena during de-sludging services and care should be taken to avoid likely incidence or provision for adequate mitigation measures.
+
+
+Mitigation measures to be adopted to keep these challenges under control are discussed in the later part of this document.
+FIRST AID
+Service Provider should have adequate first aid equipment, which will be available at all premises where service is provided
+If anyone becomes aware that an item of first aid is out of stock or out of date, they are to notify the team leader.
+Stabilize injured persons and administer First Aid
+Phone an Ambulance (Depending on the extent of the injury)
+</p>
+
+<p>
+MANAGING DEEP PIT SITUATION
+Cordon off pit areas during operations until openings are completely sealed off after operations.
+Advanced warning signage should be placed in service spots close to road corridors and other motorist lanes.
+Movement slabs of tanks should be limited to a large extent as the strength of structural members is not known
+MANAGING SPILLAGE AND LEAKAGES
+Wipe all traces of Spillage and Leakages both on vehicle and on user’s compound immediately after occurance.
+Disinfect all affected areas afterwards to prevent infectious contact.
+SAFETY PRECAUTIONS
+Use the right tool for the right job
+No fighting nor quarrels during operation.
+Smoking within tank areas is prohibited
+Warning with horn should precede all vehicular reversing.
+Service providers should use Personal Protective Equipment in a standard as to be prescribed by Esiesie-Gh.
+</p>
+                        </label>
+{#                        <label class="login-page_label">#}
+{#                            <input id="login_password" class="login-page_input" type="password" name="password">#}
+{#                            <span class="login-page_placeholder">Password</span>#}
+{#                        </label>#}
+{#                        <div class="login-section_submit">#}
+{#                            <ul>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-google fa-fw"></i></a></li>#}
+{#                            </ul>#}
+{#                            <div class="login-page-submit-btn">#}
+{#                                <input type="submit" name="submit-login" value="submit">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="login-page_forget">#}
+{#                            <a href="#">Forget Your Password ?</a>#}
+{#                        </div>#}
+                    </form>
+
+{#                    <form class="forget-form">#}
+{#                        <p class="forget-title">Forget Your Password</p>#}
+{#                        <label class="login-page_label">#}
+{#                            <input class="login-page_input" type="email" name="email" autocomplete="off">#}
+{#                            <span class="login-page_placeholder">Email</span>#}
+{#                        </label>#}
+{#                        <div class="login-section_submit">#}
+{#                            <div class="login-page-submit-btn"><input type="submit" name="submit-login" value="submit"></div>#}
+{#                        </div>#}
+{#                    </form>#}
+
+                </div>
+            </div>
+        </div>
+
+        <!--       Sign up Side      -->
+
+        <div class="signup-section page-side section-clos">
+            <div class="section-page_intro">
+                <img src="{% static 'Image/signup-icon.png' %}" alt="signup-icon">
+                <p class="section-page-intro_title">Code Of Conduct</p>
+            </div>
+
+            <div class="signup-form-area">
+                <p class="form-title">Code Of Conduct</p>
+                <div class="section-form">
+                    <form class="signup-form">
+                       <label class="login-page_label">
+                        </label>
+
+
+                        <div>
+                        <label style="color: white" for="">
+                            <p> Esiesie-GH Code of Conduct outlines expected conduct for its Service Providers. The Company enjoins its Service Providers to conduct their business fairly, impartially, in an ethical and proper manner, and in full compliance with all applicable laws and regulations of Ghana. In conducting its business, integrity must underline all company relationships, including those with clients. The highest standards of environmental, social, health and safety conduct are required of the company’s assigns in the performance of their responsibilities. Employees will not engage in conduct or activity that may raise questions as to the company’s honesty, impartiality, or reputation or otherwise cause embarrassment to the company.</p>
+
+                               <p>This Code of Conduct has been prepared to ensure that the health and safety of Service Providers Workers, the Household Served and the entire community is upheld as reasonably practicable. The document has been produced primarily for the use of our management and Signed-on Service Providers should ensure that the rules and procedures are brought to the notice of all their employees.</p>
+
+<p>Definitions of terms used:
+- The Company – Esiesie-GH
+- Client – Persons Requesting Service Affected Persons
+- LWSPs - Accredited Liquid Waste Service Providers
+- FS	-	Faecal Sludge
+</p>
+
+<p>
+COMPANY CORE VALUES</p>
+
+<p>
+The Company upholds the underlisted cardinal principles upon which its code of conduct has been framed for strict adherence by its Service Providers and their work force.
+</p>
+<ul>
+    <li>(i)Safety
+The safety of LWSPs workers, clients and the general public is our responsibility. Plan safety into every aspect of our work and relentlessly execute our plan. Drive for continuous improvement to create and sustain a zero incident culture. 
+</li>
+    <li>
+(ii)Honesty
+Be truthful, accurate, and straightforward. Be candid and non-deceptive in communication and conduct.</li>
+    <li>(iii)Accountability
+Accept responsibility for your own actions or inactions and those of the individuals you supervise. Take prompt, constructive steps to correct mistakes or defects. Promote teamwork by holding one another accountable, rejecting behaviors inconsistent with this Code of Conduct.
+</li>
+    <li>(iv)Consideration of Others
+Practice the principle of the Golden Rule. Respect the dignity, rights, safety, and personal property of others. Be open to the ideas and the opinions of others. Exercise patience and remain positive under all circumstances. Ensure that those whom your serve are not put in compromising situations.
+</li>
+    <li>(v) Pursuit of Excellence
+Consistently apply diligence, perseverance, attention to detail to ensure high-quality projects and products and excellent customer service. Build capabilities through continuous learning, coaching, mentoring, and teaching. Never accept complacency or indifference. Remain flexible and open to possibilities.
+</li>
+</ul>
+
+
+
+
+
+WORK CONDUCT
+1.Ensure to have basic tool for locating and opening Tank. Eg. Shovel, Pry bar, hook and probes.
+2.Comply with Esiesie-GH H&S Policy throughout your operations.
+3.All Service Provider Staff must complete a safety induction prior to starting any de-sludging process.
+4.Inform all Occupant present of intended operation and Keep working areas clean and tidy after operations.
+5.No smoking anywhere during operations.
+6.No fighting, bullying or aggressive behavior among service provider staff or with clients.
+7.Use Personal Protective Equipment in accordance with manufacturer’s instructions.
+8.Follow Follow de-sludging steps as stipulated in our health and safety Policy at all times.
+9.Report any accidents or near miss recorded during the operation period to Management of the Company to help in Service improvement.
+
+                            <p>DISCIPLINERY PROCEDURES</p>
+All your users/Service providers will have access to an optional evaluation form and rating criteria of the conduct of each party during the provision of Service. These ratings will help inform the Company the number of referrals to give a particular service provider going forward.
+                        </label>
+                            </div>
+                        <br><br>
+                        <div class="signup-section_submit">
+{#                            <ul>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>#}
+{#                                <li><a href="#" target="_blank"><i class="fa fa-google fa-fw"></i></a></li>#}
+{#                            </ul>#}
+{#                            <div class="login-page-submit-btn">#}
+{#                                <input type="submit" name="submit-signup" value="submit">#}
+{#                            </div>#}
+                            <br><br>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="{% static 'js/jquery-1.12.1.min.js' %}"></script>
+    <script src="{% static 'js/login-page_script.js' %}"></script>
+    <script src="{% static 'js/iziToast.js' %}"></script>
+
+    <script type="text/javascript">
+
+        $('#loader').click(function () {
+                console.log("clicked")
+                $(this).removeClass("is-active")
+            });
+
+            function addloader(){
+                 console.log("showing loader")
+                 $('#loader').addClass("loader loader-default is-active")
+            }
+
+            function removeloader(){
+            console.log("removing the loader");
+            setTimeout(()=>{
+                    $('#loader').removeClass("is-active")
+            },500)
+            }
+
+
+        $(".signup-form").submit(function(event){
+            event.preventDefault();
+            addloader()
+            var pass1 = $("#password1").val()
+            var pass2 = $("#password2").val()
+            if (pass1 === pass2) {
+                 $.ajax({
+                url: "{% url 'shitty:driver_second' %}",
+                method: "post",
+                data:{
+                    type: "register",
+                    name: $("#full_name").val(),
+                    ghana_post_address: $("#ghana_post_address").val(),
+                    username: $("#username_reg").val(),
+                    phone: $("#phone_num").val(),
+                    pass1: pass1,
+                },
+                success:function(data){
+                    removeloader()
+                    console.log(data);
+                    if (data.message === "success"){
+                             iziToast.info({
+                                title: 'ESIESIEGH',
+                                message: `Thanks for registering`,
+                                position: 'topRight',
+                                transitionIn: 'flipInX',
+                                transitionOut: 'flipOutX',
+                                }
+                                );
+                             setTimeout(function () {
+                            window.location = "{% url 'shitty:driver_dashboard' %}"
+                             },2000)
+
+                    }
+                    else {
+                        var type = data.type;
+                        console.log(type);
+                        if(type === "email"){
+                            $("#email_ad").val(" ")
+                        }
+
+                        if(type === "username"){
+                            $("#username_reg").val(" ")
+                        }
+
+                        if(type === "phone"){
+                            $("#phone_num").val(" ")
+                        }
+                        iziToast.warning({
+                                title: 'Agripool',
+                                message: `${data.info}`,
+                                position: 'topRight',
+                                transitionIn: 'flipInX',
+                                transitionOut: 'flipOutX',
+                            }
+                        );
+                    }
+                },
+                error:function(data){
+                    console.log(data);
+                }
+            })
+            }
+            else {
+                alert("password dont match")
+            }
+
+    });
+
+      $(".login-form").submit(function(event){
+        event.preventDefault();
+        addloader()
+         $.ajax({
+            url: "{% url 'shitty:driver_second' %}",
+            method: "post",
+            data:{
+                type: "login",
+                username: $("#login_username").val(),
+                password: $("#login_password").val(),
+            },
+            success:function(data){
+                console.log(data);
+                removeloader()
+                if (data.message === "success"){
+                    window.location = "{% url 'shitty:driver_dashboard' %}"
+                }
+                else {
+                     iziToast.warning({
+                            title: 'ESIESIEGH',
+                            message: `Wrong Credentials provided`,
+                            position: 'topRight',
+                            transitionIn: 'flipInX',
+                            transitionOut: 'flipOutX',
+                            }
+                            );
+                }
+            },
+            error:function(data){
+                alert("please check your internet connection")
+            }
+        })
+
+
+    })
+
+
+    </script>
+
+</body>
+
+
+</html>

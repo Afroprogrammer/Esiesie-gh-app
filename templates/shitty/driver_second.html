@@ -109,6 +109,16 @@
                             <input id="password2" class="login-page_input" type="password" name="confirm password">
                             <span class="login-page_placeholder">Confirm Password</span>
                         </label>
+
+                        <div>
+                        <label style="color: white" for="">Submitting this forms means that you do comply with the
+                            <a href="{% url 'shitty:code_of_conduct' %}">Code of Conduct </a>
+                            and
+                            <a href="{% url 'shitty:code_of_conduct' %}">Health & Safety Policy</a>
+                             of EsiesieGH
+                        </label>
+                            </div>
+                        <br><br>
                         <div class="signup-section_submit">
 {#                            <ul>#}
 {#                                <li><a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>#}
@@ -118,6 +128,9 @@
                             <div class="login-page-submit-btn">
                                 <input type="submit" name="submit-signup" value="submit">
                             </div>
+                            <br><br>
+
+
                         </div>
                     </form>
                 </div>
@@ -173,7 +186,7 @@
                     console.log(data);
                     if (data.message === "success"){
                              iziToast.info({
-                                title: 'SaniGH',
+                                title: 'ESIESIEGH',
                                 message: `Thanks for registering`,
                                 position: 'topRight',
                                 transitionIn: 'flipInX',
@@ -239,7 +252,7 @@
                 }
                 else {
                      iziToast.warning({
-                            title: 'SaniGH',
+                            title: 'ESIESIE',
                             message: `Wrong Credentials provided`,
                             position: 'topRight',
                             transitionIn: 'flipInX',
